@@ -1,1 +1,3 @@
-kaikenlaista :D
+**Aihe:** Blackjack
+
+**Käyttäjät:**
