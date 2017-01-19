@@ -1,1 +1,1 @@
-# blackjackprojekti
+Blackjack on hyvä peli :d
