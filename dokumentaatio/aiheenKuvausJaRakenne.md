@@ -1,3 +1,7 @@
 **Aihe:** Blackjack
 
-**Käyttäjät:**
+**Käyttäjät:** Pelaaja
+
+**Pelaajan toiminnot:**
+- Voittaa
+- hävitä
