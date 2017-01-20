@@ -1,7 +1,7 @@
-**Aihe:** Blackjack
+**Aihe:** Aiheena on blackjack peli. Tämä on korttipeli, jota voi pelata yksinkin jakajaa vastaa. Todennäköisesti tulen totetuttamaan projektiin myös mahdollisuuden pelata kavereiden kanssa 1-6 pelaajalla.
 
 **Käyttäjät:** Pelaaja
 
 **Pelaajan toiminnot:**
-- Voittaa
-- hävitä
+- Pelata blackjack peliä blackjackin ohjeiden mukaisesti
+- Pelin sisäisen valuutan käsittely
