@@ -5,3 +5,4 @@
 **Pelaajan toiminnot:**
 - Pelata blackjack peliä blackjackin ohjeiden mukaisesti
 - Pelin sisäisen valuutan käsittely
+- Jonkin näköisten tilastojen seuraaminen
