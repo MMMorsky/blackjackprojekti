@@ -1,1 +1,1 @@
-Blackjack on hyvä peli :d
+BlackJack korttipeli projekti
