@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package blakjakprojekti;
+package blakjakprojekti.logiikka;
 
+import blakjakprojekti.logiikka.Korttipakka;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -12,17 +8,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author max
- */
-public class TestiTest {
+public class KorttipakkaTest {
     
-    public TestiTest() {
+    Korttipakka korttipakka;
+    
+    public KorttipakkaTest() {
     }
     
     @BeforeClass
     public static void setUpClass() {
+        
     }
     
     @AfterClass
@@ -31,20 +26,21 @@ public class TestiTest {
     
     @Before
     public void setUp() {
+        this.korttipakka = new Korttipakka();
     }
     
     @After
     public void tearDown() {
     }
-
+    
+    @Test
+    public void oikeamaaraKortteja() {
+        assertEquals(52, korttipakka.getKortit().size());
+    }
+    
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //
     // @Test
     // public void hello() {}
-    @Test
-    public void hello() {
-        Testi testi = new Testi();
-        assertEquals(testi.getArvo(), 3);
-    }
 }

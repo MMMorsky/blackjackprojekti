@@ -1,11 +1,14 @@
-
 package blakjakprojekti;
 
 import blakjakprojekti.logiikka.Kayttoliittyma;
 import java.util.Scanner;
 
 public class Main {
-    Scanner lukija = new Scanner(System.in);
-    Kayttoliittyma kayttoliittyma = new Kayttoliittyma(lukija);
-    
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        Kayttoliittyma kayttoliittyma = new Kayttoliittyma(lukija);
+        kayttoliittyma.kaynnista();
+    }
+
 }

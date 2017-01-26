@@ -12,6 +12,16 @@ public class Kayttoliittyma {
     }
     
     public void kaynnista() {
+        Pelipoyta pelipoyta = new Pelipoyta();
+        pelipoyta.aloita();
         
+        System.out.println("Omat kortit: ");
+        for (Kortti kortti : pelipoyta.getPelaaja().getKortit()) {
+            System.out.println(kortti);
+        }
+        
+        System.out.println("Jakajan kortit: ");
+        
+
     }
 }
