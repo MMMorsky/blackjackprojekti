@@ -17,6 +17,8 @@ public class Korttipakka {
         Collections.shuffle(this.kortit);
     }
 
+
+
     public void luoPakka() {
         for (int i = 1; i < 14; i++) {
             kortit.add(new Kortti(1, i));

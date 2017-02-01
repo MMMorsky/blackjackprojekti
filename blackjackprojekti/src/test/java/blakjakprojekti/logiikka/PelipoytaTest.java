@@ -57,10 +57,6 @@ public class PelipoytaTest {
         assertEquals(pelipoyta.getKorttipakka().getKortit().size(), 48);
     }
 
-    @Test
-    public void pelaajanRahaMaaraOikein() {
-        assertEquals(pelipoyta.getPelaaja().getRahamaara(), 500);
-    }
 
     @Test
     public void jakajanNosteassaKortitVahenee() {

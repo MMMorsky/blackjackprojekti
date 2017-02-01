@@ -7,11 +7,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class PelaajaTest {
+public class ToimijaTest {
 
-    Pelaaja pelaaja;
+    Toimija toimija;
 
-    public PelaajaTest() {
+    public ToimijaTest() {
     }
 
     @BeforeClass
@@ -24,15 +24,11 @@ public class PelaajaTest {
 
     @Before
     public void setUp() {
-        pelaaja = new Pelaaja();
+        toimija = new Toimija();
     }
 
     @After
     public void tearDown() {
     }
 
-    @Test
-    public void pelaajallaOikeaMaaraRahaaAlussa() {
-        assertEquals(pelaaja.getRahamaara(), 500);
-    }
 }

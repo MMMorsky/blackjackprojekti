@@ -1,8 +1,5 @@
 package blakjakprojekti.logiikka;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Pelipoyta {
 
     private Pelaaja pelaaja;
@@ -21,6 +18,7 @@ public class Pelipoyta {
 
     }
 
+
     public void jaaKortit() {
         pelaaja.setKortti(korttipakka.annaKortti());
         pelaaja.setKortti(korttipakka.annaKortti());
@@ -38,7 +36,7 @@ public class Pelipoyta {
     }
 
     //getterit ja setterit
-    public Pelaaja getPelaaja() {
+    public Toimija getPelaaja() {
         return pelaaja;
     }
 
