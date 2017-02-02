@@ -5,3 +5,6 @@ Blackjack on perinteinen korttipeli, jossa pelataan pääsääntöisesti jakajaa
 
 
 [Aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
+[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+[PIT-raportti](https://htmlpreview.github.io/?https://github.com/MMMorsky/blackjackprojekti/blob/master/dokumentaatio/pit-raportti/index.html)
+[CheckStyle-raportti](https://htmlpreview.github.io/?https://github.com/MMMorsky/blackjackprojekti/blob/master/dokumentaatio/checkstyle-raportti/checkstyle.html)
