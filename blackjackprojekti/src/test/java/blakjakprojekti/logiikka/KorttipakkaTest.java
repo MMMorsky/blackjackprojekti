@@ -47,7 +47,7 @@ public class KorttipakkaTest {
     @Test
     public void kortinVastaanottaminenKasvattaaPakkaa() {
         korttipakka.annaKortti();
-        korttipakka.otaKortti(new Kortti(1, 1));
+        korttipakka.otaKortti(new Kortti(Maa.HERTTA, 1));
         assertEquals(korttipakka.getKortit().size(), 52);
     }
 

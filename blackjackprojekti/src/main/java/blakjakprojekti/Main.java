@@ -1,6 +1,6 @@
 package blakjakprojekti;
 
-import blakjakprojekti.logiikka.Kayttoliittyma;
+import blakjakprojekti.kayttoliittyma.Kayttoliittyma;
 import java.util.Scanner;
 
 public class Main {

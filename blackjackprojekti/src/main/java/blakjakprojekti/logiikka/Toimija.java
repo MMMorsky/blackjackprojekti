@@ -27,12 +27,12 @@ public class Toimija {
         int tuleekoToinenLuku = 0;
 
         for (Kortti kortti : kortit) {
-            if ( kortti.getArvo() == 1) {
+            if (kortti.getArvo() == 1) {
                 varaArvo.add(1);
 
                 paaArvo.add(10);
                 tuleekoToinenLuku++;
-            } else if ( kortti.getArvo() >= 10 ) {
+            } else if (kortti.getArvo() >= 10) {
 
                 varaArvo.add(10);
                 paaArvo.add(10);
@@ -50,14 +50,14 @@ public class Toimija {
         int paaArvosumma = paaArvo.stream().mapToInt(Integer::intValue).sum();
 
         for (Integer arvo : paaArvo) {
-            temp+= arvo;
+            temp += arvo;
         }
 
-        if ( paaArvosumma <= 21) {
+        if (paaArvosumma <= 21) {
             palautettava.add(temp);
         }
 
-        if ( !varaArvo.isEmpty() && tuleekoToinenLuku >= 1 && varaArvosumma <= 21) {
+        if (!varaArvo.isEmpty() && tuleekoToinenLuku >= 1 && varaArvosumma <= 21) {
             for (Integer arvo : varaArvo) {
                 temp2 += arvo;
             }
@@ -65,8 +65,6 @@ public class Toimija {
         }
         return palautettava;
     }
-
-
 
     public List<Kortti> getKortit() {
         return kortit;

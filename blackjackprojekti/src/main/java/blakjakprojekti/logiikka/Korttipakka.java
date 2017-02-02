@@ -17,20 +17,18 @@ public class Korttipakka {
         Collections.shuffle(this.kortit);
     }
 
-
-
     public void luoPakka() {
         for (int i = 1; i < 14; i++) {
-            kortit.add(new Kortti(1, i));
+            kortit.add(new Kortti(Maa.HERTTA, i));
         }
         for (int i = 1; i < 14; i++) {
-            kortit.add(new Kortti(2, i));
+            kortit.add(new Kortti(Maa.PATA, i));
         }
         for (int i = 1; i < 14; i++) {
-            kortit.add(new Kortti(3, i));
+            kortit.add(new Kortti(Maa.RISTI, i));
         }
         for (int i = 1; i < 14; i++) {
-            kortit.add(new Kortti(4, i));
+            kortit.add(new Kortti(Maa.RUUTU, i));
         }
     }
 

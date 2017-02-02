@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 7,
+      <title>File: 9,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -44,6 +44,20 @@ under the License.
             </tr>
           </thead>
           <tbody>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.Kayttoliittyma.java">blakjakprojekti/kayttoliittyma/Kayttoliittyma.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Jakaja.java">blakjakprojekti/logiikka/Jakaja.java</a>
@@ -74,20 +88,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelipoyta.java">blakjakprojekti/logiikka/Pelipoyta.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#blakjakprojekti.Main.java">blakjakprojekti/Main.java</a>
                 </td>
                 <td>
@@ -102,7 +102,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Kayttoliittyma.java">blakjakprojekti/logiikka/Kayttoliittyma.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelipoyta.java">blakjakprojekti/logiikka/Pelipoyta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Toimija.java">blakjakprojekti/logiikka/Toimija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Maa.java">blakjakprojekti/logiikka/Maa.java</a>
                 </td>
                 <td>
                   0

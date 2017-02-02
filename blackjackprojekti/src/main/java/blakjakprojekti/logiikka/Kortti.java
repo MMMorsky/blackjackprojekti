@@ -2,15 +2,15 @@ package blakjakprojekti.logiikka;
 
 public class Kortti {
 
-    private int maa;
+    private Maa maa;
     private int arvo;
 
-    public Kortti(int maa, int arvo) {
+    public Kortti(Maa maa, int arvo) {
         this.maa = maa;
         this.arvo = arvo;
     }
 
-    public int getMaa() {
+    public Maa getMaa() {
         return maa;
     }
 
@@ -18,16 +18,8 @@ public class Kortti {
         return arvo;
     }
 
-    public String annaMaa() {
-        if (maa == 1) {
-            return "Pata";
-        } else if (maa == 2) {
-            return "Ruutu";
-        } else if (maa == 3) {
-            return "Hertta";
-        } else {
-            return "Risti";
-        }
+    public Maa annaMaa() {
+        return this.maa;
     }
 
     public String annaArvo() {

@@ -39,6 +39,12 @@ public class PelipoytaTest {
     @After
     public void tearDown() {
     }
+    
+    @Test
+    public void aloitusToimii() {
+        pelipoyta.aloita();
+        assertEquals(pelipoyta.getKorttipakka().getKortit().size(), 48);
+    }
 
     @Test
     public void pelaajanNostaminenLisaaPelaajanKortteja() {
@@ -55,6 +61,12 @@ public class PelipoytaTest {
     public void korttipakastaVaheneeKortitJaettassa() {
         pelipoyta.jaaKortit();
         assertEquals(pelipoyta.getKorttipakka().getKortit().size(), 48);
+    }
+    
+    @Test
+    public void jakajanNostaessaJakajanKortitLisaantyy() {
+        pelipoyta.jakajaNostaa();
+        assertEquals(pelipoyta.getJakaja().getKortit().size(), 1);
     }
 
 

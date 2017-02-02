@@ -1,5 +1,7 @@
-package blakjakprojekti.logiikka;
+package blakjakprojekti.kayttoliittyma;
 
+import blakjakprojekti.logiikka.Kortti;
+import blakjakprojekti.logiikka.Pelipoyta;
 import java.util.Scanner;
 
 public class Kayttoliittyma {
@@ -8,21 +10,14 @@ public class Kayttoliittyma {
     private Pelipoyta pelipoyta;
 
     public Kayttoliittyma(Scanner lukija) {
+        this.pelipoyta = new Pelipoyta();
         this.lukija = lukija;
     }
 
     public void kaynnista() {
-        this.pelipoyta = new Pelipoyta();
         pelipoyta.aloita();
 
-        System.out.println("Omat kortit: ");
-        for (Kortti kortti : pelipoyta.getPelaaja().getKortit()) {
-            System.out.println(kortti);
-        }
-
-        System.out.println("Jakajan kortit: ");
-        System.out.println(pelipoyta.getJakaja().getKortit().get(0));
-        System.out.println("-----");
+        tulostaKortit();
 
         System.out.println("");
 
@@ -30,14 +25,23 @@ public class Kayttoliittyma {
 
         pelaajanNosto();
 
-        while (true) {
+        jakajanNosto();
 
-            jakajanNosto();
-            if (pelipoyta.getJakaja().meneekoYli()) {
-                break;
-            }
+    }
+
+    public boolean jakajanNosto() {
+
+        while (true) {
+            System.out.println("Jakaja Nostaa");
+            System.out.println();
+            pelipoyta.jakajaNostaa();
+
             tulostaKortit();
             tulostaPisteet();
+
+            if (pelipoyta.getJakaja().meneekoYli()) {
+                return false;
+            }
 
             try {
                 Thread.sleep(3000);
@@ -46,24 +50,10 @@ public class Kayttoliittyma {
             }
         }
 
-
-
-
-
     }
-
-    public void jakajanNosto() {
-        System.out.println("Jakaja Nostaa");
-        System.out.println();
-        pelipoyta.jakajaNostaa();
-
-
-
-    }
-
-
 
     public void pelaajanNosto() {
+
         while (true) {
             System.out.println("Nostetaanko kortti?");
             System.out.println("n - Nosto  -- j Jää");
@@ -93,9 +83,12 @@ public class Kayttoliittyma {
             System.out.print(kortti + " ");
         }
         System.out.println("");
+        System.out.println("Jakajan kortit: ");
+        for (Kortti kortti : pelipoyta.getJakaja().getKortit()) {
+            System.out.print(kortti + " ");
+        }
+        System.out.println("");
     }
-
-
 
     public void tulostaPisteet() {
         System.out.println("Pelaajan pisteet:");

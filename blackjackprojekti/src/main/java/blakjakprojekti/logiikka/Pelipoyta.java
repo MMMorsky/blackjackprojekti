@@ -18,7 +18,6 @@ public class Pelipoyta {
 
     }
 
-
     public void jaaKortit() {
         pelaaja.setKortti(korttipakka.annaKortti());
         pelaaja.setKortti(korttipakka.annaKortti());
