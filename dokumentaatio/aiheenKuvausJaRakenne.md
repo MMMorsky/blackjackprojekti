@@ -9,4 +9,4 @@
 
 Luokkakaavio:
 
-![Luokkakaavio](/dokumentaatio/luokkakaavio.png)
+![Luokkakaavio](/dokumentaatio/uusiluokkakaavio.png)
