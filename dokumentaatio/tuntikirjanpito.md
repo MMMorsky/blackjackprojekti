@@ -7,3 +7,5 @@ Päivä | Tunnit | Kuvaus
 25.01.2016 | 4h | Luokkakaavion teko, raporttien hiominen ja viimeistely palautusta varten.
 01.01.2017 | 4h | Logiikan kehitys
 02.01.2017 | 5h | Suunnittelua, logiikkaa ja viimeistelyä palautusta varten
+09.01.2017 | 4h | Logiikkaa ja bugien korjausta
+10.01.2017 | 3h | Testejä ja logiikkaa
