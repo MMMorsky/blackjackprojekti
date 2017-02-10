@@ -18,12 +18,40 @@ public class Pelipoyta {
 
     }
 
+    public void uusiKierros() {
+        this.jakaja = new Jakaja();
+        this.pelaaja = new Pelaaja();
+        this.korttipakka = new Korttipakka();
+    }
+
     public void jaaKortit() {
         pelaaja.setKortti(korttipakka.annaKortti());
         pelaaja.setKortti(korttipakka.annaKortti());
 
         jakaja.setKortti(korttipakka.annaKortti());
         jakaja.setKortti(korttipakka.annaKortti());
+    }
+
+    public boolean kenellaOnEnitenPisteita() { //true jos pelaajalla false jos jakajalla
+        int pelaajanKorkein = 0;
+        int jakajanKorkein = 0;
+
+        for (Integer arvo : pelaaja.palautaPisteet()) {
+            if (arvo > pelaajanKorkein) {
+                pelaajanKorkein = arvo;
+            }
+        }
+
+        for ( Integer arvo : jakaja.palautaPisteet()) {
+            if (arvo > jakajanKorkein) {
+                jakajanKorkein = arvo;
+            }
+        }
+
+        if (pelaajanKorkein < jakajanKorkein) {
+            return false;
+        }
+        return true;
     }
 
     public void jakajaNostaa() {

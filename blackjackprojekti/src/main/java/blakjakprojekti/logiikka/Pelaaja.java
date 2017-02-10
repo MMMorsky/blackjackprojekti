@@ -6,6 +6,5 @@ public class Pelaaja extends Toimija {
 
     public Pelaaja() {
         this.rahamaara = 500;
-
     }
 }

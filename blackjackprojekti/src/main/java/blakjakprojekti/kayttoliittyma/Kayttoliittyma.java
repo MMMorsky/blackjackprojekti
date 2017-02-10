@@ -15,23 +15,47 @@ public class Kayttoliittyma {
     }
 
     public void kaynnista() {
-        pelipoyta.aloita();
+        while (true) {
 
-        tulostaKortit();
+            pelipoyta.aloita();
 
-        System.out.println("");
+            tulostaKortit();
 
-        tulostaPisteet();
+            System.out.println("");
 
-        pelaajanNosto();
+            tulostaPisteet();
 
-        jakajanNosto();
+            while (true) {
+                if (!pelaajanNosto()) {
+                    break;
+                }
+
+                if (jakajanNosto()) {
+                    break;
+                }
+            }
+
+            if (pelipoyta.kenellaOnEnitenPisteita()) {
+                System.out.println("Voitit");
+            } else {
+                System.out.println("Hävisit");
+            }
+
+            System.out.println();
+            System.out.println("UusiKierros");
+            System.out.println();
+            pelipoyta.uusiKierros();
+        }
+
 
     }
 
     public boolean jakajanNosto() {
 
         while (true) {
+            if (!pelipoyta.getJakaja().nostaakoJakaja()) {
+                break;
+            }
             System.out.println("Jakaja Nostaa");
             System.out.println();
             pelipoyta.jakajaNostaa();
@@ -49,10 +73,10 @@ public class Kayttoliittyma {
                 e.printStackTrace();
             }
         }
-
+        return true;
     }
 
-    public void pelaajanNosto() {
+    public boolean pelaajanNosto() {
 
         while (true) {
             System.out.println("Nostetaanko kortti?");
@@ -65,16 +89,17 @@ public class Kayttoliittyma {
             }
 
             tulostaKortit();
+            tulostaPisteet();
 
             if (pelipoyta.getPelaaja().meneekoYli()) {
-                break;
+                return false;
             }
 
-            tulostaPisteet();
+
 
             System.out.println("");
         }
-
+        return true;
     }
 
     public void tulostaKortit() {
@@ -91,10 +116,16 @@ public class Kayttoliittyma {
     }
 
     public void tulostaPisteet() {
+        int temp = 0;
+        int temp2 = 0;
         System.out.println("Pelaajan pisteet:");
         System.out.print("Pisteet: ");
         for (Integer arvo : pelipoyta.getPelaaja().palautaPisteet()) {
             System.out.print(arvo + " ");
+            temp++;
+        }
+        if (temp == 0 ) {
+            System.out.println("Ylimeni");
         }
         System.out.println();
         System.out.println("Jakanpisteet");
@@ -102,6 +133,10 @@ public class Kayttoliittyma {
 
         for (Integer arvo : pelipoyta.getJakaja().palautaPisteet()) {
             System.out.print(arvo + " ");
+            temp2++;
+        }
+        if ( temp2 == 0) {
+            System.out.println("Ylimeni");
         }
         System.out.println();
     }
