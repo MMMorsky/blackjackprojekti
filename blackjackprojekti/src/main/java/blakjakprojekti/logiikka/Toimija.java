@@ -1,7 +1,10 @@
 package blakjakprojekti.logiikka;
 
 import java.util.*;
-
+/**
+ * BlackJackPöydässä oleva toimija ja sen toiminnallisuus
+ * @author max
+ */
 public class Toimija {
 
     private List<Kortti> kortit;
@@ -11,6 +14,11 @@ public class Toimija {
         this.kortit = new ArrayList<>();
         this.kortit = new ArrayList<>();
     }
+    
+    /**
+     * Testaa onko toimijan korttien summa yli 21
+     * @return palauttaa true jos menee yli
+     */
 
     public boolean meneekoYli() {
         if (palautaPisteet().isEmpty()) {
@@ -18,6 +26,12 @@ public class Toimija {
         }
         return false;
     }
+    
+    /**
+     * Palauttaa toimijan pisteet listana.
+     * Mikäli on ässiä kädessä tulee listaan 2 arvoa
+     * @return palauttaa pisteet
+     */
 
     public List<Integer> palautaPisteet() {
         List<Integer> palautettava = new ArrayList<>();

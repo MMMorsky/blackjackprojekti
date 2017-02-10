@@ -1,5 +1,8 @@
 package blakjakprojekti.logiikka;
-
+/**
+ * Blackjack pelin kortti luokka, jolle on annettu arvo ja maa
+ * @author max
+ */
 public class Kortti {
 
     private Maa maa;

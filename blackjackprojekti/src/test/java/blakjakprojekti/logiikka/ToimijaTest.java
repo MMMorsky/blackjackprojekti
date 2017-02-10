@@ -72,6 +72,13 @@ public class ToimijaTest {
 
         assertTrue(toimija.meneekoYli());
     }
+    
+    @Test
+    public void pisteidenPalautusToimiiJosArvo16() {
+        toimija.setKortti(new Kortti(Maa.HERTTA, 10));
+        toimija.setKortti(new Kortti(Maa.HERTTA, 6));
+        assertEquals(toimija.palautaPisteet().stream().mapToInt(Integer::intValue).sum(), 16);
+    }
 
     @Test
     public void meneekoYliTasan() {

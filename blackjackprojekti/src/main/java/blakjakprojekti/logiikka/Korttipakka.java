@@ -1,8 +1,15 @@
+
+
 package blakjakprojekti.logiikka;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+/**
+ * Blackjackpöydän kortti pakka
+ *
+ * @author max
+ */
 
 public class Korttipakka {
 
@@ -12,10 +19,17 @@ public class Korttipakka {
         this.kortit = new ArrayList<>();
         luoPakka();
     }
-
+    
+    /**
+     * Sekoittaa korttipakan
+     */
     public void sekoita() {
         Collections.shuffle(this.kortit);
     }
+    
+    /**
+     * Luo korttipakkaan oikean määrän oikeita kortteja
+     */
 
     public void luoPakka() {
         for (int i = 1; i < 14; i++) {

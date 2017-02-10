@@ -4,6 +4,11 @@ import blakjakprojekti.logiikka.Kortti;
 import blakjakprojekti.logiikka.Pelipoyta;
 import java.util.Scanner;
 
+/**
+ * Blackjack projektin käyttöliittymä
+ *
+ * @author max
+ */
 public class Kayttoliittyma {
 
     private Scanner lukija;
@@ -25,18 +30,13 @@ public class Kayttoliittyma {
 
             tulostaPisteet();
 
-            while (true) {
-                if (!pelaajanNosto()) {
-                    break;
-                }
+            pelaajanNosto();
+            jakajanNosto();
 
-                if (jakajanNosto()) {
-                    break;
-                }
-            }
-
-            if (pelipoyta.kenellaOnEnitenPisteita()) {
+            if (pelipoyta.kenellaEnitenPisteita() == 1) {
                 System.out.println("Voitit");
+            } else if (pelipoyta.kenellaEnitenPisteita() == 2) {
+                System.out.println("Tasapeli");
             } else {
                 System.out.println("Hävisit");
             }
@@ -46,14 +46,12 @@ public class Kayttoliittyma {
             System.out.println();
             pelipoyta.uusiKierros();
         }
-
-
     }
 
-    public boolean jakajanNosto() {
+    public void jakajanNosto() {
 
         while (true) {
-            if (!pelipoyta.getJakaja().nostaakoJakaja()) {
+            if (!pelipoyta.nostaakoJakaja()) {
                 break;
             }
             System.out.println("Jakaja Nostaa");
@@ -64,7 +62,7 @@ public class Kayttoliittyma {
             tulostaPisteet();
 
             if (pelipoyta.getJakaja().meneekoYli()) {
-                return false;
+                break;
             }
 
             try {
@@ -73,10 +71,10 @@ public class Kayttoliittyma {
                 e.printStackTrace();
             }
         }
-        return true;
+
     }
 
-    public boolean pelaajanNosto() {
+    public void pelaajanNosto() {
 
         while (true) {
             System.out.println("Nostetaanko kortti?");
@@ -92,14 +90,11 @@ public class Kayttoliittyma {
             tulostaPisteet();
 
             if (pelipoyta.getPelaaja().meneekoYli()) {
-                return false;
+                break;
             }
-
-
-
             System.out.println("");
         }
-        return true;
+
     }
 
     public void tulostaKortit() {
@@ -124,7 +119,7 @@ public class Kayttoliittyma {
             System.out.print(arvo + " ");
             temp++;
         }
-        if (temp == 0 ) {
+        if (temp == 0) {
             System.out.println("Ylimeni");
         }
         System.out.println();
@@ -135,7 +130,7 @@ public class Kayttoliittyma {
             System.out.print(arvo + " ");
             temp2++;
         }
-        if ( temp2 == 0) {
+        if (temp2 == 0) {
             System.out.println("Ylimeni");
         }
         System.out.println();
