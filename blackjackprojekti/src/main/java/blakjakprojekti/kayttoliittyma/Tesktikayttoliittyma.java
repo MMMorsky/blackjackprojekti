@@ -9,12 +9,12 @@ import java.util.Scanner;
  *
  * @author max
  */
-public class Kayttoliittyma {
+public class Tesktikayttoliittyma {
 
     private Scanner lukija;
     private Pelipoyta pelipoyta;
 
-    public Kayttoliittyma(Scanner lukija) {
+    public Tesktikayttoliittyma(Scanner lukija) {
         this.pelipoyta = new Pelipoyta();
         this.lukija = lukija;
     }
