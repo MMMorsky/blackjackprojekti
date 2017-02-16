@@ -5,10 +5,20 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
+import static sun.misc.ClassFileTransformer.add;
 
 public class Gui implements Runnable {
 
@@ -22,7 +32,7 @@ public class Gui implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("BlackJackPeli");
-        frame.setPreferredSize(new Dimension(600, 600));
+        frame.setPreferredSize(new Dimension(500, 500));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -33,14 +43,31 @@ public class Gui implements Runnable {
     }
 
     private void luoKomponentit(Container container) {
-        container.add(luoPainikkeet(), BorderLayout.SOUTH);
-        
+        GridLayout layout = new GridLayout(0, 10);
+        container.setLayout(layout);
+        //container.add(luoKortti(), BorderLayout.CENTER);
+        for (int i = 0; i < 100; i++) {
+            container.add(luoKortti());
+            
+        }
     }
-    
+
+    private JLabel luoKortti() {
+        BufferedImage kuva = null;
+        try {
+            kuva = ImageIO.read(new File("testikuva.gif"));
+        } catch (IOException ex) {
+            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        JLabel picLabel = new JLabel(new ImageIcon(kuva));
+        return picLabel;
+    }
+
     private JPanel luoPainikkeet() {
-        JPanel panel = new JPanel(new GridLayout(1,2));
+        JPanel panel = new JPanel(new GridLayout(0, 2));
         panel.add(new JButton("Nosta"));
         panel.add(new JButton("Jää"));
+
         return panel;
     }
 
