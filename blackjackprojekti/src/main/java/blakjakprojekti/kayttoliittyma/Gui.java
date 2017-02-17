@@ -4,6 +4,7 @@ import blakjakprojekti.logiikka.Pelipoyta;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -32,7 +33,7 @@ public class Gui implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("BlackJackPeli");
-        frame.setPreferredSize(new Dimension(500, 500));
+        frame.setPreferredSize(new Dimension(750, 750));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,18 +47,36 @@ public class Gui implements Runnable {
         GridLayout layout = new GridLayout(0, 10);
         container.setLayout(layout);
         //container.add(luoKortti(), BorderLayout.CENTER);
+
         for (int i = 0; i < 100; i++) {
-            container.add(luoKortti());
-            
+            if ( i == 0) {
+                container.add(luoPainike("Aloita"));
+            } else if (i == 90) {
+                container.add(luoPainike("Nosta"));
+            } else if (i == 92) {
+                container.add(luoPainike("Jää"));
+
+            } else {
+                container.add(new JLabel());
+
+            }
         }
+    }
+
+    private JButton luoPainike(String nimi) {
+        JButton painike = new JButton(nimi);
+        painike.setFont(new Font("Arial", Font.PLAIN, 15));
+        return painike;
     }
 
     private JLabel luoKortti() {
         BufferedImage kuva = null;
         try {
             kuva = ImageIO.read(new File("testikuva.gif"));
+
         } catch (IOException ex) {
-            Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Gui.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
         JLabel picLabel = new JLabel(new ImageIcon(kuva));
         return picLabel;
