@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 9,
+      <title>File: 14,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -46,20 +46,6 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.Kayttoliittyma.java">blakjakprojekti/kayttoliittyma/Kayttoliittyma.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Jakaja.java">blakjakprojekti/logiikka/Jakaja.java</a>
                 </td>
                 <td>
@@ -74,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelaaja.java">blakjakprojekti/logiikka/Pelaaja.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.AloitaKuuntelija.java">blakjakprojekti/kayttoliittyma/AloitaKuuntelija.java</a>
                 </td>
                 <td>
                   0
@@ -88,21 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelipoyta.java">blakjakprojekti/logiikka/Pelipoyta.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.Main.java">blakjakprojekti/Main.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.Tesktikayttoliittyma.java">blakjakprojekti/kayttoliittyma/Tesktikayttoliittyma.java</a>
                 </td>
                 <td>
                   0
@@ -130,7 +102,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Kortti.java">blakjakprojekti/logiikka/Kortti.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.JaaKuuntelija.java">blakjakprojekti/kayttoliittyma/JaaKuuntelija.java</a>
                 </td>
                 <td>
                   0
@@ -145,6 +117,104 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Maa.java">blakjakprojekti/logiikka/Maa.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Kortti.java">blakjakprojekti/logiikka/Kortti.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelaaja.java">blakjakprojekti/logiikka/Pelaaja.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.Main.java">blakjakprojekti/Main.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelipoyta.java">blakjakprojekti/logiikka/Pelipoyta.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.Gui.java">blakjakprojekti/kayttoliittyma/Gui.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.KayttoliittymanAsettelija.java">blakjakprojekti/kayttoliittyma/KayttoliittymanAsettelija.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.NostaKuuntelija.java">blakjakprojekti/kayttoliittyma/NostaKuuntelija.java</a>
                 </td>
                 <td>
                   0

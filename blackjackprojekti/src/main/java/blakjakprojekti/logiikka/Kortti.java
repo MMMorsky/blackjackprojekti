@@ -1,6 +1,8 @@
 package blakjakprojekti.logiikka;
+
 /**
- * Blackjack pelin kortti luokka, jolle on annettu arvo ja maa
+ * Blackjack pelin kortti luokka, jolle on annettu arvo ja maa.
+ *
  * @author max
  */
 public class Kortti {
@@ -8,23 +10,36 @@ public class Kortti {
     private Maa maa;
     private int arvo;
 
+    /**
+     * Luokan konstruktori.
+     * @param maa Kortin maa, enum luokkana.
+     * @param arvo Kortin arvo.
+     */
     public Kortti(Maa maa, int arvo) {
         this.maa = maa;
         this.arvo = arvo;
     }
 
     public Maa getMaa() {
-        return maa;
+        return this.maa;
     }
 
     public int getArvo() {
-        return arvo;
+        return this.arvo;
     }
 
+    /**
+     * Palauttaa kortin maan enum luokkana.
+     * @return Palauttaa kortin maan.
+     */
     public Maa annaMaa() {
         return this.maa;
     }
 
+    /**
+     * Palauttaa kortin arvon teksikäyttöliittymää varten.
+     * @return kortin arvon.
+     */
     public String annaArvo() {
         if (arvo == 11) {
             return "J";

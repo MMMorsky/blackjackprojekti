@@ -25,9 +25,15 @@ public class Gui implements Runnable {
 
     private JFrame frame;
     private Pelipoyta pelipoyta;
+    private KayttoliittymanAsettelija kayttoliittymanAsettelija;
 
+    /**
+     * Luo käyttöliittymän.
+     * @param pelipoyta 
+     */
     public Gui(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
+        this.kayttoliittymanAsettelija = new KayttoliittymanAsettelija(pelipoyta);
     }
 
     @Override
@@ -44,36 +50,15 @@ public class Gui implements Runnable {
     }
 
     private void luoKomponentit(Container container) {
-        GridLayout layout = new GridLayout(0, 10);
-        container.setLayout(layout);
-        //container.add(luoKortti(), BorderLayout.CENTER);
 
-        for (int i = 0; i < 100; i++) {
-            if ( i == 0) {
-                container.add(luoPainike("Aloita"));
-            } else if (i == 90) {
-                container.add(luoPainike("Nosta"));
-            } else if (i == 92) {
-                container.add(luoPainike("Jää"));
+        container.add(kayttoliittymanAsettelija.asettele());
 
-            } else {
-                container.add(new JLabel());
-
-            }
-        }
-    }
-
-    private JButton luoPainike(String nimi) {
-        JButton painike = new JButton(nimi);
-        painike.setFont(new Font("Arial", Font.PLAIN, 15));
-        return painike;
     }
 
     private JLabel luoKortti() {
         BufferedImage kuva = null;
         try {
             kuva = ImageIO.read(new File("testikuva.gif"));
-
         } catch (IOException ex) {
             Logger.getLogger(Gui.class
                     .getName()).log(Level.SEVERE, null, ex);

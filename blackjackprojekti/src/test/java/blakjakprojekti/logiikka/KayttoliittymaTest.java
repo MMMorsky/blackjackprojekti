@@ -17,31 +17,31 @@ import static org.junit.Assert.*;
  * @author max
  */
 public class KayttoliittymaTest {
-    
+
     public KayttoliittymaTest() {
     }
-    
+
     Pelipoyta pelipoyta;
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         pelipoyta = new Pelipoyta();
     }
-    
+
     @After
     public void tearDown() {
     }
 
     @Test
     public void testi() {
-        
+
     }
 }

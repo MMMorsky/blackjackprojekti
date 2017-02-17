@@ -5,7 +5,7 @@ import blakjakprojekti.logiikka.Pelipoyta;
 import java.util.Scanner;
 
 /**
- * Blackjack projektin käyttöliittymä
+ * Blackjack projektin käyttöliittymä.
  *
  * @author max
  */
@@ -14,11 +14,20 @@ public class Tesktikayttoliittyma {
     private Scanner lukija;
     private Pelipoyta pelipoyta;
 
+    /**
+     * Luo tekstikäyttöliittymän.
+     *
+     * @param lukija ottaa tekstin lukijan.
+     */
     public Tesktikayttoliittyma(Scanner lukija) {
         this.pelipoyta = new Pelipoyta();
         this.lukija = lukija;
     }
 
+    /**
+     * Käynnistää tekstikäyttöliittymän.
+     *
+     */
     public void kaynnista() {
         while (true) {
 
@@ -48,6 +57,9 @@ public class Tesktikayttoliittyma {
         }
     }
 
+    /**
+     * Jakajan nostaminen.
+     */
     public void jakajanNosto() {
 
         while (true) {
@@ -74,6 +86,9 @@ public class Tesktikayttoliittyma {
 
     }
 
+    /**
+     * Pelaajan nostaminen.
+     */
     public void pelaajanNosto() {
 
         while (true) {
@@ -97,6 +112,9 @@ public class Tesktikayttoliittyma {
 
     }
 
+    /**
+     * Tulostaa kortit.
+     */
     public void tulostaKortit() {
         System.out.println("Tämän hetkiset kortit: ");
         for (Kortti kortti : pelipoyta.getPelaaja().getKortit()) {
@@ -110,6 +128,9 @@ public class Tesktikayttoliittyma {
         System.out.println("");
     }
 
+    /**
+     * Tulostaa pisteet.
+     */
     public void tulostaPisteet() {
         int temp = 0;
         int temp2 = 0;

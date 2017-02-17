@@ -38,7 +38,7 @@ public class ToimijaTest {
     public void pisteidenPalautusToimii() {
         toimija.setKortti(new Kortti(Maa.HERTTA, 1));
         lista.add(1);
-        
+
         assertEquals(toimija.palautaPisteet(), lista);
     }
 
@@ -52,17 +52,16 @@ public class ToimijaTest {
 
         assertEquals(toimija.palautaPisteet(), lista);
     }
-    
+
     @Test
     public void pisteidenPalatusToimiiJosMeneeYli() {
         toimija.setKortti(new Kortti(Maa.HERTTA, 11));
         toimija.setKortti(new Kortti(Maa.HERTTA, 12));
         toimija.setKortti(new Kortti(Maa.HERTTA, 2));
-        
+
         assertTrue(toimija.palautaPisteet().isEmpty());
-        
+
     }
-    
 
     @Test
     public void meneekoYliTestiYksYli() {
@@ -72,7 +71,7 @@ public class ToimijaTest {
 
         assertTrue(toimija.meneekoYli());
     }
-    
+
     @Test
     public void pisteidenPalautusToimiiJosArvo16() {
         toimija.setKortti(new Kortti(Maa.HERTTA, 10));
@@ -93,7 +92,7 @@ public class ToimijaTest {
     public void meneekoYliYksAlle() {
         toimija.setKortti(new Kortti(Maa.HERTTA, 11));
         toimija.setKortti(new Kortti(Maa.HERTTA, 12));
-        
+
         assertFalse(toimija.meneekoYli());
     }
 

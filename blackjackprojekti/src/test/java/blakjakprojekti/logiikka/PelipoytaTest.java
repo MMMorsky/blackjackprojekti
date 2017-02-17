@@ -39,13 +39,12 @@ public class PelipoytaTest {
     @After
     public void tearDown() {
     }
-    
+
     @Test
     public void aloitusToimii() {
         pelipoyta.aloita();
         assertEquals(pelipoyta.getKorttipakka().getKortit().size(), 48);
     }
-    
 
     @Test
     public void pelaajanNostaminenLisaaPelaajanKortteja() {
@@ -63,13 +62,12 @@ public class PelipoytaTest {
         pelipoyta.jaaKortit();
         assertEquals(pelipoyta.getKorttipakka().getKortit().size(), 48);
     }
-    
+
     @Test
     public void jakajanNostaessaJakajanKortitLisaantyy() {
         pelipoyta.jakajaNostaa();
         assertEquals(pelipoyta.getJakaja().getKortit().size(), 1);
     }
-
 
     @Test
     public void jakajanNosteassaKortitVahenee() {
@@ -82,54 +80,54 @@ public class PelipoytaTest {
         pelipoyta.jaaKortit();
         assertEquals(pelipoyta.getPelaaja().getKortit().size(), 2);
     }
-    
+
     @Test
     public void nostaakoJakajaJosPisteet16() {
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 7));
-        
+
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 6));
         assertTrue(pelipoyta.nostaakoJakaja());
     }
-    
+
     @Test
     public void nostaakoJakajaJosPisteet18() {
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 8));
         assertFalse(pelipoyta.nostaakoJakaja());
     }
-    
+
     @Test
     public void pelaajallaEnemmanPisteita() {
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 8));
-        
+
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 9));
-        
+
         assertEquals(pelipoyta.kenellaEnitenPisteita(), 1);
     }
-    
+
     @Test
     public void jakajallaEnemmanPisteita() {
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 11));
-        
+
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 9));
-        
+
         assertEquals(pelipoyta.kenellaEnitenPisteita(), 3);
     }
-    
+
     @Test
     public void tasaPeli() {
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 10));
-        
+
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
         pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
-        
+
         assertEquals(pelipoyta.kenellaEnitenPisteita(), 2);
     }
 

@@ -1,7 +1,7 @@
 package blakjakprojekti.logiikka;
 
 /**
- * Tässä on ohjelma loogikan ylin aste, jolla voidaan ohjailla pelipöytää
+ * Tässä on ohjelma loogikan ylin aste, jolla voidaan ohjailla pelipöytää.
  */
 public class Pelipoyta {
 
@@ -9,30 +9,33 @@ public class Pelipoyta {
     private Jakaja jakaja;
     private Korttipakka korttipakka;
 
+    /**
+     * Alustaa pelipöydän.
+     */
     public Pelipoyta() {
         uusiKierros();
     }
 
     /**
-     * Sekoittaa korttipakan ja jakaa pelaajille kortit
+     * Sekoittaa korttipakan ja jakaa pelaajille kortit.
      */
     public void aloita() {
         korttipakka.sekoita();
         jaaKortit();
 
     }
-    
+
     /**
-     * Alustaa/resetoi pelipöydän
+     * Alustaa/resetoi pelipöydän.
      */
     public void uusiKierros() {
         this.jakaja = new Jakaja();
         this.pelaaja = new Pelaaja();
         this.korttipakka = new Korttipakka();
     }
-    
+
     /**
-     * Jakaa aloituksessa pelaajalle ja jakajalle 2 korttia
+     * Jakaa aloituksessa pelaajalle ja jakajalle 2 korttia.
      */
     public void jaaKortit() {
         pelaaja.setKortti(korttipakka.annaKortti());
@@ -41,12 +44,12 @@ public class Pelipoyta {
         jakaja.setKortti(korttipakka.annaKortti());
         jakaja.setKortti(korttipakka.annaKortti());
     }
-    
-    /**
-     * kertoo kayttoliittymalle nostaako jakaja lisää kortteja
-     * @return palauttaa true mikäli jakaja nostaa lisää
-     */
 
+    /**
+     * kertoo kayttoliittymalle nostaako jakaja lisää kortteja.
+     *
+     * @return palauttaa true mikäli jakaja nostaa lisää.
+     */
     public boolean nostaakoJakaja() {
         int temp1 = 0;
         int temp2 = 0;
@@ -69,13 +72,13 @@ public class Pelipoyta {
         }
         return true;
     }
-    
-    /**
-     * Palauttaa sen kenellä on eniten pisteitä
-     * @return 1 jos pelaajalla 2 jos tasapeli 3 jos jakajalla
-     */
 
-    public int kenellaEnitenPisteita() { 
+    /**
+     * Palauttaa sen kenellä on eniten pisteitä.
+     *
+     * @return 1 jos pelaajalla 2 jos tasapeli 3 jos jakajalla.
+     */
+    public int kenellaEnitenPisteita() {
         int pelaajanKorkein = 0;
         int jakajanKorkein = 0;
 
@@ -100,11 +103,15 @@ public class Pelipoyta {
         }
 
     }
-
+    /**
+     * Jakaja nostaa korttipakasta yhden kortin.
+     */
     public void jakajaNostaa() {
         this.jakaja.setKortti(korttipakka.annaKortti());
     }
-
+    /**
+     * Pelaaja nostaa korttipakasta yhden kortin.
+     */
     public void pelaajaNostaa() {
         this.pelaaja.setKortti(korttipakka.annaKortti());
     }

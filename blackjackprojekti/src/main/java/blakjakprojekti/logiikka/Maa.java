@@ -1,6 +1,8 @@
 package blakjakprojekti.logiikka;
+
 /**
- * Kortin maa
+ * Kortin maa.
+ *
  * @author max
  */
 public enum Maa {
