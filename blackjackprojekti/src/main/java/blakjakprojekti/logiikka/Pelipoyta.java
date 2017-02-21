@@ -20,7 +20,7 @@ public class Pelipoyta {
      * Sekoittaa korttipakan ja jakaa pelaajille kortit.
      */
     public void aloita() {
-        //korttipakka.sekoita();
+        korttipakka.sekoita();
         jaaKortit();
 
     }

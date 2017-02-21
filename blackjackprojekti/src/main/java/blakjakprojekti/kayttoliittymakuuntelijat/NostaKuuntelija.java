@@ -1,5 +1,6 @@
-package blakjakprojekti.kayttoliittyma;
+package blakjakprojekti.kayttoliittymakuuntelijat;
 
+import blakjakprojekti.kayttoliittyma.KayttoliittymanAsettelija;
 import blakjakprojekti.logiikka.Pelipoyta;
 import java.awt.Component;
 import java.awt.Container;
@@ -9,19 +10,22 @@ import java.awt.event.ActionListener;
 public class NostaKuuntelija implements ActionListener {
 
     private Pelipoyta pelipoyta;
+    private KayttoliittymanAsettelija asettelija;
 
     /**
      * Luo Nosta painikkeen kuuntelijan.
      * @param pelipoyta Ottaa pelipöytä luokan.
      * 
      */
-    public NostaKuuntelija(Pelipoyta pelipoyta) {
+    public NostaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;
+        this.asettelija = asettelija;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        pelipoyta.pelaajaNostaa();
+        asettelija.paivita();
     }
 
 }

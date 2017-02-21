@@ -41,7 +41,7 @@ public class KortinValitsin {
         BufferedImage kuva = null;
         for (Kortti kortti : pelipoyta.getPelaaja().getKortit()) {
             try {
-                kuva = ImageIO.read(new File(kortti.palautaTiedostopaate()));
+                kuva = ImageIO.read(new File("kortit/" + kortti.palautaTiedostopaate()));
             } catch (IOException ex) {
                 Logger.getLogger(Gui.class
                         .getName()).log(Level.SEVERE, null, ex);
@@ -51,5 +51,24 @@ public class KortinValitsin {
         }
 
         return pelaajankuvat;
+    }
+    
+        public List<JLabel> palautaJakajanKortit() {
+        List<JLabel> jakajankuvat = new ArrayList<>();
+
+        
+        BufferedImage kuva = null;
+        for (Kortti kortti : pelipoyta.getJakaja().getKortit()) {
+            try {
+                kuva = ImageIO.read(new File("kortit/" + kortti.palautaTiedostopaate()));
+            } catch (IOException ex) {
+                Logger.getLogger(Gui.class
+                        .getName()).log(Level.SEVERE, null, ex);
+            }
+            JLabel picLabel = new JLabel(new ImageIcon(kuva));
+            jakajankuvat.add(picLabel);
+        }
+
+        return jakajankuvat;
     }
 }

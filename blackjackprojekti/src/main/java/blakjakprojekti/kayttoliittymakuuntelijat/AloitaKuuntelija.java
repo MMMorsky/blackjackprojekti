@@ -1,5 +1,6 @@
-package blakjakprojekti.kayttoliittyma;
+package blakjakprojekti.kayttoliittymakuuntelijat;
 
+import blakjakprojekti.kayttoliittyma.KayttoliittymanAsettelija;
 import blakjakprojekti.logiikka.Pelipoyta;
 import java.awt.Component;
 import java.awt.Container;
@@ -24,6 +25,7 @@ public class AloitaKuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        pelipoyta.uusiKierros();
         pelipoyta.aloita();
         asettelija.paivita();
     }

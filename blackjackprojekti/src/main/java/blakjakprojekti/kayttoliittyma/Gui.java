@@ -39,7 +39,7 @@ public class Gui implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("BlackJackPeli");
-        frame.setPreferredSize(new Dimension(750, 750));
+        frame.setPreferredSize(new Dimension(750, 800));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
