@@ -54,6 +54,10 @@ public class Kortti {
         }
 
     }
+    
+    public String palautaTiedostopaate() {
+        return "" + this.maa + this.arvo + ".jpg";
+    }
 
     @Override
     public String toString() {

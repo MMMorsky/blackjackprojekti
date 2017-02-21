@@ -51,7 +51,7 @@ public class Gui implements Runnable {
 
     private void luoKomponentit(Container container) {
 
-        container.add(kayttoliittymanAsettelija.asettele());
+        container.add(kayttoliittymanAsettelija.getUlkoasu());
 
     }
 

@@ -8,22 +8,24 @@ import java.awt.event.ActionListener;
 
 public class AloitaKuuntelija implements ActionListener {
 
-    private Container container;
     private Pelipoyta pelipoyta;
+    private KayttoliittymanAsettelija asettelija;
 
     /**
      * Luo kuuntelijan.
-     * @param pelipoyta 
-     * @param container 
+     *
+     * @param pelipoyta
+     *
      */
-    public AloitaKuuntelija(Pelipoyta pelipoyta, Container container) {
-        this.container = container;
+    public AloitaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;
+        this.asettelija = asettelija;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        pelipoyta.aloita();
+        asettelija.paivita();
     }
 
 }

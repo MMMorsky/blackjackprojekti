@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 
 public class JaaKuuntelija implements ActionListener {
 
-    private Container container;
     private Pelipoyta pelipoyta;
 
     
@@ -17,8 +16,7 @@ public class JaaKuuntelija implements ActionListener {
      * @param pelipoyta Vastaanottaa logiikan.
      * @param container Vastaanottaa containerin.
      */
-    public JaaKuuntelija(Pelipoyta pelipoyta, Container container) {
-        this.container = container;
+    public JaaKuuntelija(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
     }
 

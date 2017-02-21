@@ -8,16 +8,14 @@ import java.awt.event.ActionListener;
 
 public class NostaKuuntelija implements ActionListener {
 
-    private Container container;
     private Pelipoyta pelipoyta;
 
     /**
      * Luo Nosta painikkeen kuuntelijan.
      * @param pelipoyta Ottaa pelipöytä luokan.
-     * @param container Ottaa container viitteen.
+     * 
      */
-    public NostaKuuntelija(Pelipoyta pelipoyta, Container container) {
-        this.container = container;
+    public NostaKuuntelija(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
     }
 
