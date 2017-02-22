@@ -15,6 +15,19 @@ public class Pelaaja extends Toimija {
      */
     public Pelaaja() {
         this.rahamaara = 500;
+        this.panos = 0;
+    }
+
+    public void panosta100() {
+        this.panos += 100;
+    }
+
+    public void panosta200() {
+        this.panos += 200;
+    }
+
+    public void panosta50() {
+        this.panos += 50;
     }
 
     public int getRahamaara() {
@@ -32,6 +45,5 @@ public class Pelaaja extends Toimija {
     public void setPanos(int panos) {
         this.panos = panos;
     }
-    
-    
+
 }

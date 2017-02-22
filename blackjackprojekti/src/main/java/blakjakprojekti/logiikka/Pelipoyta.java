@@ -111,30 +111,34 @@ public class Pelipoyta {
     public int getPelinTila() {
         return pelinTila;
     }
-    
-    
+
     /**
-     * Asettaa pelin tilan. 0 ei käynnissä , 1 käynnissä, 2 Hävisit, 3 Voitit, 4 Tasapeli
-     * @param pelinTila 
+     * Asettaa pelin tilan. 0 ei käynnissä , 1 käynnissä, 2 Hävisit, 3 Voitit, 4
+     * Tasapeli
+     *
+     * @param pelinTila
      */
     public void setPelinTila(int pelinTila) {
         if (pelinTila == 1) {
             pelaaja.setRahamaara(pelaaja.getRahamaara() - pelaaja.getPanos());
-        } else if ( pelinTila == 3) {
+        } else if (pelinTila == 3) {
             pelaaja.setRahamaara(pelaaja.getPanos() * 2 + pelaaja.getRahamaara());
-        } else if ( pelinTila == 4) {
+            pelaaja.setPanos(0);
+        } else if (pelinTila == 4) {
             pelaaja.setRahamaara(pelaaja.getPanos() + pelaaja.getRahamaara());
+            pelaaja.setPanos(0);
         }
+        
         this.pelinTila = pelinTila;
     }
-    
-    
+
     /**
      * Jakaja nostaa korttipakasta yhden kortin.
      */
     public void jakajaNostaa() {
         this.jakaja.setKortti(korttipakka.annaKortti());
     }
+
     /**
      * Pelaaja nostaa korttipakasta yhden kortin.
      */

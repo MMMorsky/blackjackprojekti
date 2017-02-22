@@ -47,6 +47,7 @@ public class Gui implements Runnable {
 
         frame.pack();
         frame.setVisible(true);
+        frame.setResizable(false);
     }
 
     private void luoKomponentit(Container container) {

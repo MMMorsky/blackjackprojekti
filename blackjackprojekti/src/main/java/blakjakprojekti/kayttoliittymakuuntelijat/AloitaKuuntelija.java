@@ -11,7 +11,6 @@ public class AloitaKuuntelija implements ActionListener {
 
     private Pelipoyta pelipoyta;
     private KayttoliittymanAsettelija asettelija;
-    private JFormattedTextField panos;
 
     /**
      * Luo kuuntelijan.
@@ -19,24 +18,23 @@ public class AloitaKuuntelija implements ActionListener {
      * @param pelipoyta
      *
      */
-    public AloitaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija, JFormattedTextField panos) {
+    public AloitaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;
         this.asettelija = asettelija;
-        this.panos = panos;
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (panos.getText().matches("[0-9]+")) {
-            pelipoyta.getPelaaja().setPanos(Integer.parseInt(panos.getText()));
+        if (pelipoyta.getPelaaja().getRahamaara() >= pelipoyta.getPelaaja().getPanos()) {
             pelipoyta.uusiKierros();
             pelipoyta.aloita();
             pelipoyta.setPelinTila(1);
-        } else {
-            panos.setText("Uusi Yritys");
-        }
-        asettelija.paivita();
+            asettelija.paivita();
+        } 
+
+        
     }
 
 }
