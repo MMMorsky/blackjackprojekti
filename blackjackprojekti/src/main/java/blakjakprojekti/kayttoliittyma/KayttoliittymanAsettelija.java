@@ -36,14 +36,14 @@ public class KayttoliittymanAsettelija {
     public void asettele() {
         ulkoasu.removeAll();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 90; i++) {
             if (i == 0) {
                 this.ulkoasu.add(luoAloitaPainike());
-            } else if (i == 90) {
+            } else if (i == 80) {
                 this.ulkoasu.add(luoNostaPainike());
-            } else if (i == 92) {
+            } else if (i == 82) {
                 this.ulkoasu.add(luoJaaPainike());
-            } else if (i == 70 && !kortinvalitsin.palautaPelaajanKortit().isEmpty()) {
+            } else if (i == 60 && !kortinvalitsin.palautaPelaajanKortit().isEmpty()) {
                 for (JLabel jLabel : kortinvalitsin.palautaPelaajanKortit()) {
                     this.ulkoasu.add(jLabel);
                     i++;

@@ -34,7 +34,7 @@ public class JaaKuuntelija implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if (!pelipoyta.getJakaja().meneekoYli()) {
+        if (pelipoyta.nostaakoJakaja()) {
             pelipoyta.jakajaNostaa();
             asettelija.paivita();
         }
