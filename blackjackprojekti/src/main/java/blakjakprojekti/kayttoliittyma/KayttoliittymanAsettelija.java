@@ -5,17 +5,26 @@ import blakjakprojekti.kayttoliittymakuuntelijat.JaaKuuntelija;
 import blakjakprojekti.kayttoliittymakuuntelijat.AloitaKuuntelija;
 import blakjakprojekti.logiikka.Pelipoyta;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.text.NumberFormat;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.text.JTextComponent;
 
 public class KayttoliittymanAsettelija {
 
     private Pelipoyta pelipoyta;
     private JPanel ulkoasu;
     private KortinValitsin kortinvalitsin;
+    private JFormattedTextField panos;
 
     /**
      * Luo käyttöliittymän asettelijan.
@@ -26,6 +35,8 @@ public class KayttoliittymanAsettelija {
         this.pelipoyta = pelipoyta;
         this.ulkoasu = new JPanel(new GridLayout(0, 10));
         this.kortinvalitsin = new KortinValitsin(this.pelipoyta);
+        this.panos = new JFormattedTextField();
+
     }
 
     /**
@@ -55,6 +66,30 @@ public class KayttoliittymanAsettelija {
                     i++;
                 }
                 i--;
+            } else if (i == 9 && pelipoyta.getPelinTila() == 2) {
+                this.ulkoasu.add(new JLabel("Hävisit!"));
+            } else if (i == 9 && pelipoyta.getPelinTila() == 3) {
+                this.ulkoasu.add(new JLabel("Voitit!"));
+            } else if (i == 9 && pelipoyta.getPelinTila() == 4) {
+                this.ulkoasu.add(new JLabel("Tasapeli!"));
+            } else if (i == 7) {
+                this.ulkoasu.add(new JLabel("Valuutta:"));
+            } else if (i == 8) {
+                this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getRahamaara())));
+            } else if (i == 4 && pelipoyta.getPelinTila() != 1) {
+                this.ulkoasu.add(panos);
+            } else if (i == 3 && pelipoyta.getPelinTila() != 1) {
+                JLabel panos = new JLabel("Aseta panos:");
+                panos.setFont(new Font("Arial", Font.PLAIN, 12));
+                this.ulkoasu.add(panos);
+            } else if (i == 30) {
+                JLabel panos = new JLabel("Jakaja:");
+                panos.setFont(new Font("Arial", Font.PLAIN, 15));
+                this.ulkoasu.add(panos);
+            } else if (i == 50) {
+                JLabel panos = new JLabel("Pelaaja:");
+                panos.setFont(new Font("Arial", Font.PLAIN, 15));
+                this.ulkoasu.add(panos);
             } else {
                 this.ulkoasu.add(new JLabel());
             }
@@ -65,7 +100,6 @@ public class KayttoliittymanAsettelija {
     public JPanel getUlkoasu() {
         asettele();
         return ulkoasu;
-
     }
 
     public void paivita() {
@@ -75,9 +109,9 @@ public class KayttoliittymanAsettelija {
     }
 
     private JButton luoAloitaPainike() {
-        JButton painike = new JButton("Aloita");
+        JButton painike = new JButton("<html>Uusi<br>Kierros</html>");
         painike.setFont(new Font("Arial", Font.PLAIN, 15));
-        painike.addActionListener(new AloitaKuuntelija(pelipoyta, this));
+        painike.addActionListener(new AloitaKuuntelija(pelipoyta, this, panos));
         return painike;
     }
 

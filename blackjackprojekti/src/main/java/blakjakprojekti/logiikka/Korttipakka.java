@@ -21,7 +21,6 @@ public class Korttipakka {
         this.kortit = new ArrayList<>();
         luoPakka();
     }
-
     /**
      * Sekoittaa korttipakan.
      */
@@ -45,6 +44,11 @@ public class Korttipakka {
         for (int i = 1; i < 14; i++) {
             kortit.add(new Kortti(Maa.RUUTU, i));
         }
+    }
+    
+    public void uusiPeli() {
+        this.kortit.clear();
+        luoPakka();
     }
 
     public List<Kortti> getKortit() {

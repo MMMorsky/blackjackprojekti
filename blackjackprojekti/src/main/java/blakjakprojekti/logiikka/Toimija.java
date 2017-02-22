@@ -49,7 +49,7 @@ public class Toimija {
             if (kortti.getArvo() == 1) {
                 varaArvo.add(1);
 
-                paaArvo.add(10);
+                paaArvo.add(11);
                 tuleekoToinenLuku++;
             } else if (kortti.getArvo() >= 10) {
 
@@ -83,6 +83,10 @@ public class Toimija {
             palautettava.add(temp2);
         }
         return palautettava;
+    }
+    
+    public void uusiPeli() {
+        this.kortit.clear();
     }
 
     public List<Kortti> getKortit() {

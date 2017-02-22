@@ -8,12 +8,16 @@ public class Pelipoyta {
     private Pelaaja pelaaja;
     private Jakaja jakaja;
     private Korttipakka korttipakka;
+    private int pelinTila;
 
     /**
      * Alustaa pelipöydän.
      */
     public Pelipoyta() {
-        uusiKierros();
+        this.jakaja = new Jakaja();
+        this.pelaaja = new Pelaaja();
+        this.korttipakka = new Korttipakka();
+        this.pelinTila = 0;
     }
 
     /**
@@ -29,9 +33,9 @@ public class Pelipoyta {
      * Alustaa/resetoi pelipöydän.
      */
     public void uusiKierros() {
-        this.jakaja = new Jakaja();
-        this.pelaaja = new Pelaaja();
-        this.korttipakka = new Korttipakka();
+        pelaaja.uusiPeli();
+        jakaja.uusiPeli();
+        korttipakka.uusiPeli();
     }
 
     /**
@@ -103,6 +107,28 @@ public class Pelipoyta {
         }
 
     }
+
+    public int getPelinTila() {
+        return pelinTila;
+    }
+    
+    
+    /**
+     * Asettaa pelin tilan. 0 ei käynnissä , 1 käynnissä, 2 Hävisit, 3 Voitit, 4 Tasapeli
+     * @param pelinTila 
+     */
+    public void setPelinTila(int pelinTila) {
+        if (pelinTila == 1) {
+            pelaaja.setRahamaara(pelaaja.getRahamaara() - pelaaja.getPanos());
+        } else if ( pelinTila == 3) {
+            pelaaja.setRahamaara(pelaaja.getPanos() * 2 + pelaaja.getRahamaara());
+        } else if ( pelinTila == 4) {
+            pelaaja.setRahamaara(pelaaja.getPanos() + pelaaja.getRahamaara());
+        }
+        this.pelinTila = pelinTila;
+    }
+    
+    
     /**
      * Jakaja nostaa korttipakasta yhden kortin.
      */
@@ -117,7 +143,7 @@ public class Pelipoyta {
     }
 
     //getterit ja setterit
-    public Toimija getPelaaja() {
+    public Pelaaja getPelaaja() {
         return pelaaja;
     }
 

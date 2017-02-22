@@ -14,8 +14,9 @@ public class NostaKuuntelija implements ActionListener {
 
     /**
      * Luo Nosta painikkeen kuuntelijan.
+     *
      * @param pelipoyta Ottaa pelipöytä luokan.
-     * 
+     *
      */
     public NostaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;
@@ -24,8 +25,14 @@ public class NostaKuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        pelipoyta.pelaajaNostaa();
+        if (pelipoyta.getPelinTila()  == 1) {
+            pelipoyta.pelaajaNostaa();
+            if (pelipoyta.getPelaaja().meneekoYli()) {
+                pelipoyta.setPelinTila(2);
+            }
+        }
         asettelija.paivita();
+
     }
 
 }
