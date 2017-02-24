@@ -5,6 +5,7 @@ import blakjakprojekti.logiikka.Pelipoyta;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -17,54 +18,54 @@ public class KortinValitsin {
 
     private Pelipoyta pelipoyta;
 
+    /**
+     * Tämä luokka valitsee käyttöliittymälle, oikean kuvan vastaamaan korttia.
+     * @param pelipoyta Ohjelman toiminnallisuus
+     */
     public KortinValitsin(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
     }
 
-    public JLabel palautaKuva() {
-        BufferedImage kuva = null;
-
-        try {
-            kuva = ImageIO.read(new File("HERTTA1.jpg"));
-        } catch (IOException ex) {
-            Logger.getLogger(Gui.class
-                    .getName()).log(Level.SEVERE, null, ex);
-        }
-        JLabel picLabel = new JLabel(new ImageIcon(kuva));
-        return picLabel;
-    }
-
+    
+    /**
+     * Palauttaa pelaajan kortit kuvina.
+     * @return Palauttaa kortit listana JLabeleita
+     */
     public List<JLabel> palautaPelaajanKortit() {
         List<JLabel> pelaajankuvat = new ArrayList<>();
 
-        
         BufferedImage kuva = null;
         for (Kortti kortti : pelipoyta.getPelaaja().getKortit()) {
+            InputStream is = getClass().getClassLoader().getResourceAsStream("kortit/" + kortti.palautaTiedostopaate());
             try {
-                kuva = ImageIO.read(new File("kortit/" + kortti.palautaTiedostopaate()));
+                kuva = ImageIO.read(is);
             } catch (IOException ex) {
-                Logger.getLogger(Gui.class
-                        .getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(KortinValitsin.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             JLabel picLabel = new JLabel(new ImageIcon(kuva));
             pelaajankuvat.add(picLabel);
         }
 
         return pelaajankuvat;
     }
-    
-        public List<JLabel> palautaJakajanKortit() {
+
+    /**
+     * Palauttaa jakajankortit kuvina.
+     * @return Palautuu JLabel listana
+     */
+    public List<JLabel> palautaJakajanKortit() {
         List<JLabel> jakajankuvat = new ArrayList<>();
 
-        
         BufferedImage kuva = null;
         for (Kortti kortti : pelipoyta.getJakaja().getKortit()) {
+            InputStream is = getClass().getClassLoader().getResourceAsStream("kortit/" + kortti.palautaTiedostopaate());
             try {
-                kuva = ImageIO.read(new File("kortit/" + kortti.palautaTiedostopaate()));
+                kuva = ImageIO.read(is);
             } catch (IOException ex) {
-                Logger.getLogger(Gui.class
-                        .getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(KortinValitsin.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             JLabel picLabel = new JLabel(new ImageIcon(kuva));
             jakajankuvat.add(picLabel);
         }

@@ -12,11 +12,11 @@ public class AloitaKuuntelija implements ActionListener {
     private Pelipoyta pelipoyta;
     private KayttoliittymanAsettelija asettelija;
 
+   
     /**
-     * Luo kuuntelijan.
-     *
-     * @param pelipoyta
-     *
+     * Aloita napin kuuntelija.
+     * @param pelipoyta Ohjelman päälogiikka
+     * @param asettelija Ohjelman asettelija, jolla päivitetään pelin näkymä.
      */
     public AloitaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;
@@ -32,9 +32,8 @@ public class AloitaKuuntelija implements ActionListener {
             pelipoyta.aloita();
             pelipoyta.setPelinTila(1);
             asettelija.paivita();
-        } 
+        }
 
-        
     }
 
 }

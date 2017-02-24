@@ -5,6 +5,10 @@
 **Pelaajan toiminnot:**
 - Pelata blackjack peliä blackjackin ohjeiden mukaisesti
 
+**Rakenne kuvaus:**
+Ohjelma on rakennettu Pelipoyta luokan ympärille. Pelipöytään kuuluu pelaaja, ja jakaja luokat. Niillä on samankaltaista toiminnallisuutta, joten ne perivät luokan Toimija.
+Pelipöytään kuuluu myös Korttipakka luokka. Se sisältää korttipakalle oleellisia toimintoja, kuten sekoittaminen ja pakan luominen. Korttipakka itsessään sisältää 52 kappaletta Kortti luokan olioita. Kortteihin liittyy myös enum luokka Maa, joka määrittelee kortin maan.
+
 Luokkakaavio:
 
 ![Luokkakaavio](/dokumentaatio/uusiluokkakaavio.png)

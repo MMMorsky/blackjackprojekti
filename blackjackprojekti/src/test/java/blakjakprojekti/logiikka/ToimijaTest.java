@@ -47,7 +47,6 @@ public class ToimijaTest {
         toimija.setKortti(new Kortti(Maa.HERTTA, 1));
         toimija.setKortti(new Kortti(Maa.HERTTA, 1));
 
-        lista.add(20);
         lista.add(2);
 
         assertEquals(toimija.palautaPisteet(), lista);

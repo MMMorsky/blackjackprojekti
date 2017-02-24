@@ -9,5 +9,8 @@ Päivä | Tunnit | Kuvaus
 02.02.2017 | 5h | Suunnittelua, logiikkaa ja viimeistelyä palautusta varten
 09.02.2017 | 4h | Logiikkaa ja bugien korjausta
 10.02.2017 | 3h | Testejä ja logiikkaa
-16.02.2016 | 4h | Käyttöliittymän aloittelua
-17.02.2016 | 4h | Käyttöliittymän suunnittelua ja viimeistelyä palautukseen
+16.02.2017 | 4h | Käyttöliittymän aloittelua
+17.02.2017 | 4h | Käyttöliittymän suunnittelua ja viimeistelyä palautukseen
+20.02.2017 | 4h | Käyttöliittymän toteutusta
+23.02.2017 | 6h | Käyttöliittymän toteutusta
+24.02.2017 | 2h | Valmistelu palautusta varten

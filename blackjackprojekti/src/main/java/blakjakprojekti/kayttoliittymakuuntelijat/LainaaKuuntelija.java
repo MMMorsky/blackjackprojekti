@@ -16,7 +16,7 @@ public class LainaaKuuntelija implements ActionListener {
      * Luo Nosta painikkeen kuuntelijan.
      *
      * @param pelipoyta Ottaa pelipöytä luokan.
-     *
+     * @param asettelija Päivittää pelinäkymän.
      */
     public LainaaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;

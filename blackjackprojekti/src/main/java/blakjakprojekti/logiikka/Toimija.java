@@ -33,8 +33,9 @@ public class Toimija {
     }
 
     /**
-     * Palauttaa toimijan pisteet listana. Mikäli on ässiä kädessä tulee listaan 2 arvoa.
-     * 
+     * Palauttaa toimijan pisteet listana. Mikäli on ässiä kädessä tulee listaan
+     * 2 arvoa.
+     *
      *
      * @return palauttaa pisteet.
      */
@@ -84,18 +85,23 @@ public class Toimija {
         }
         return palautettava;
     }
-    
+
+    /**
+     * Aloittaa uuden pelin.
+     */
     public void uusiPeli() {
         this.kortit.clear();
     }
 
+ 
     public List<Kortti> getKortit() {
         return kortit;
     }
 
     /**
      * Asettaa kortin.
-     * @param kortti 
+     *
+     * @param kortti asettaa pelaajalle kortin
      */
     public void setKortti(Kortti kortti) {
         this.kortit.add(kortti);

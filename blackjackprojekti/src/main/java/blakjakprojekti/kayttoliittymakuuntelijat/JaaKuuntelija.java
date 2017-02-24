@@ -16,10 +16,9 @@ public class JaaKuuntelija implements ActionListener {
     private KayttoliittymanAsettelija asettelija;
 
     /**
-     * Luo Jää napin kuuntelija.
-     *
-     * @param pelipoyta Vastaanottaa logiikan.
-     * @param container Vastaanottaa containerin.
+     * Luo jakajan Jakamis painikkeen.
+     * @param pelipoyta Ohjelman päälogiikka.
+     * @param asettelija Ohjelman käyttöliittymän päivittäjä.
      */
     public JaaKuuntelija(Pelipoyta pelipoyta, KayttoliittymanAsettelija asettelija) {
         this.pelipoyta = pelipoyta;

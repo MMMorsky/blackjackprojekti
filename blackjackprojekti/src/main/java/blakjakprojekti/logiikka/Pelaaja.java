@@ -18,14 +18,23 @@ public class Pelaaja extends Toimija {
         this.panos = 0;
     }
 
+    /**
+     * Panostaa 100.
+     */
     public void panosta100() {
         this.panos += 100;
     }
 
+    /**
+     * Panostaa 200.
+     */
     public void panosta200() {
         this.panos += 200;
     }
 
+    /**
+     * Panostaa 50.
+     */
     public void panosta50() {
         this.panos += 50;
     }

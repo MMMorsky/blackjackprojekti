@@ -23,7 +23,7 @@ public class KayttoliittymanAsettelija {
     /**
      * Luo käyttöliittymän asettelijan.
      *
-     * @param pelipoyta
+     * @param pelipoyta Pelipöydän toiminnallisuus
      */
     public KayttoliittymanAsettelija(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
@@ -35,7 +35,7 @@ public class KayttoliittymanAsettelija {
     /**
      * Asettelee käyttöliittymän komponentit.
      *
-     * @return Palauttaa käyttöliittymän komponentit.
+     * 
      */
     public void asettele() {
         ulkoasu.removeAll();
@@ -99,11 +99,18 @@ public class KayttoliittymanAsettelija {
 
     }
 
+    /**
+     * Palauttaa ulkoasun käyttöliittymälle.
+     * @return palauttaa ulkoasun
+     */
     public JPanel getUlkoasu() {
         asettele();
         return ulkoasu;
     }
 
+    /**
+     * Päivittää ulkoasun.
+     */
     public void paivita() {
         asettele();
         ulkoasu.revalidate();
@@ -120,10 +127,11 @@ public class KayttoliittymanAsettelija {
                 paivita();
             }
         });
-        if ( pelipoyta.getPelinTila() != 1) {
+        if (pelipoyta.getPelinTila() != 1) {
+            nolla.setFont(new Font("Arial", Font.PLAIN, 15));
             nollaa.add(nolla);
         }
-        
+
         return nollaa;
     }
 

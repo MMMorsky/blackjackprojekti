@@ -12,6 +12,7 @@ public class Kortti {
 
     /**
      * Luokan konstruktori.
+     *
      * @param maa Kortin maa, enum luokkana.
      * @param arvo Kortin arvo.
      */
@@ -30,6 +31,7 @@ public class Kortti {
 
     /**
      * Palauttaa kortin maan enum luokkana.
+     *
      * @return Palauttaa kortin maan.
      */
     public Maa annaMaa() {
@@ -38,6 +40,7 @@ public class Kortti {
 
     /**
      * Palauttaa kortin arvon teksikäyttöliittymää varten.
+     *
      * @return kortin arvon.
      */
     public String annaArvo() {
@@ -54,7 +57,11 @@ public class Kortti {
         }
 
     }
-    
+
+    /**
+     * Palauttaa tiedostonpäätteen, jotta voidaan valita oikea kuva käyttöliittymälle.
+     * @return oikean tiedostopäätteen
+     */
     public String palautaTiedostopaate() {
         return "" + this.maa + this.arvo + ".jpg";
     }

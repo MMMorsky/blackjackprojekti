@@ -116,7 +116,7 @@ public class Pelipoyta {
      * Asettaa pelin tilan. 0 ei käynnissä , 1 käynnissä, 2 Hävisit, 3 Voitit, 4
      * Tasapeli
      *
-     * @param pelinTila
+     * @param pelinTila pelin tämänhetkinen tila
      */
     public void setPelinTila(int pelinTila) {
         if (pelinTila == 1) {
@@ -128,7 +128,7 @@ public class Pelipoyta {
             pelaaja.setRahamaara(pelaaja.getPanos() + pelaaja.getRahamaara());
             pelaaja.setPanos(0);
         }
-        
+
         this.pelinTila = pelinTila;
     }
 

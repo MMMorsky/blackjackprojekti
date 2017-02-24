@@ -13,7 +13,6 @@ public class Korttipakka {
 
     private List<Kortti> kortit;
 
-    
     /**
      * Luo korttipakan.
      */
@@ -21,6 +20,7 @@ public class Korttipakka {
         this.kortit = new ArrayList<>();
         luoPakka();
     }
+
     /**
      * Sekoittaa korttipakan.
      */
@@ -45,7 +45,10 @@ public class Korttipakka {
             kortit.add(new Kortti(Maa.RUUTU, i));
         }
     }
-    
+
+    /**
+     * Aloittaa uudenpelin.
+     */
     public void uusiPeli() {
         this.kortit.clear();
         luoPakka();
@@ -57,6 +60,7 @@ public class Korttipakka {
 
     /**
      * Ottaa kortin pakasta.
+     *
      * @param kortti ottaa kortin.
      */
     public void otaKortti(Kortti kortti) {
@@ -65,6 +69,7 @@ public class Korttipakka {
 
     /**
      * Antaa kortin kortin pakasta.
+     *
      * @return palauttaa otetun kortin.
      */
     public Kortti annaKortti() {

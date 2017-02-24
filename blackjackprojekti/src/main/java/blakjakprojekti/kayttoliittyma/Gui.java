@@ -29,7 +29,8 @@ public class Gui implements Runnable {
 
     /**
      * Luo käyttöliittymän.
-     * @param pelipoyta 
+     *
+     * @param pelipoyta Pelipöydän toiminnallisuus
      */
     public Gui(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
@@ -39,7 +40,7 @@ public class Gui implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("BlackJackPeli");
-        frame.setPreferredSize(new Dimension(750, 800));
+        frame.setPreferredSize(new Dimension(750, 750));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
