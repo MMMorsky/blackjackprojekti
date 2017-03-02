@@ -1,7 +1,6 @@
 package blakjakprojekti;
 
 import blakjakprojekti.kayttoliittyma.Gui;
-import blakjakprojekti.kayttoliittyma.Tesktikayttoliittyma;
 import blakjakprojekti.logiikka.Pelipoyta;
 import javax.swing.SwingUtilities;
 import java.util.Scanner;

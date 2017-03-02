@@ -42,52 +42,52 @@ public class KayttoliittymanAsettelija {
         ulkoasu.setBackground(new Color(105, 233, 41));
 
         for (int i = 0; i < 90; i++) {
-            if (i == 0 && pelipoyta.getPelinTila() != 1 && pelipoyta.getPelaaja().getRahamaara() != 0) {
+            if (i == 0 && pelipoyta.getPelinTila() != 1 && pelipoyta.getPelaaja().getPanos() != 0) {
                 this.ulkoasu.add(luoAloitaPainike());
-            } else if (i == 5) {
+            } else if (i == 3 && pelipoyta.getPelinTila() != 1) {
+                JLabel panos = new JLabel("Aseta panos:");
+                panos.setFont(new Font("Arial", Font.PLAIN, 12));
+                this.ulkoasu.add(panos);
+            } else if (i == 4 && pelipoyta.getPelinTila() != 1) {
+                this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getPanos())));
+            } else if (i == 5 ) {
                 this.ulkoasu.add(new PanostajaNappi(pelipoyta, this));
-            } else if (i == 6) {
+            } else if (i == 6 && pelipoyta.getPelaaja().getPanos() != 0) {
                 this.ulkoasu.add(luoNollaaPainike());
-            } else if (i == 80) {
-                this.ulkoasu.add(luoNostaPainike());
-            } else if (i == 82) {
-                this.ulkoasu.add(luoJaaPainike());
-            } else if (i == 60 && !kortinvalitsin.palautaPelaajanKortit().isEmpty()) {
-                for (JLabel jLabel : kortinvalitsin.palautaPelaajanKortit()) {
-                    this.ulkoasu.add(jLabel);
-                    i++;
-                }
-                i--;
+            } else if (i == 7) {
+                this.ulkoasu.add(new JLabel("Valuutta:"));
+            }  else if (i == 8) {
+                this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getRahamaara())));
+            }  else if (i == 9 && pelipoyta.getPelinTila() == 2) {
+                this.ulkoasu.add(new JLabel("Hävisit!"));
+            } else if (i == 9 && pelipoyta.getPelinTila() == 3) {
+                this.ulkoasu.add(new JLabel("Voitit!"));
+            } else if (i == 9 && pelipoyta.getPelinTila() == 4) {
+                this.ulkoasu.add(new JLabel("Tasapeli!"));
+            } else if (i == 30 && pelipoyta.getPelinTila() == 1) {
+                JLabel panos = new JLabel("Jakaja:");
+                panos.setFont(new Font("Arial", Font.PLAIN, 15));
+                this.ulkoasu.add(panos);
             } else if (i == 40 && !kortinvalitsin.palautaJakajanKortit().isEmpty()) {
                 for (JLabel jLabel : kortinvalitsin.palautaJakajanKortit()) {
                     this.ulkoasu.add(jLabel);
                     i++;
                 }
                 i--;
-            } else if (i == 9 && pelipoyta.getPelinTila() == 2) {
-                this.ulkoasu.add(new JLabel("Hävisit!"));
-            } else if (i == 9 && pelipoyta.getPelinTila() == 3) {
-                this.ulkoasu.add(new JLabel("Voitit!"));
-            } else if (i == 9 && pelipoyta.getPelinTila() == 4) {
-                this.ulkoasu.add(new JLabel("Tasapeli!"));
-            } else if (i == 7) {
-                this.ulkoasu.add(new JLabel("Valuutta:"));
-            } else if (i == 8) {
-                this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getRahamaara())));
-            } else if (i == 4 && pelipoyta.getPelinTila() != 1) {
-                this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getPanos())));
-            } else if (i == 3 && pelipoyta.getPelinTila() != 1) {
-                JLabel panos = new JLabel("Aseta panos:");
-                panos.setFont(new Font("Arial", Font.PLAIN, 12));
-                this.ulkoasu.add(panos);
-            } else if (i == 30) {
-                JLabel panos = new JLabel("Jakaja:");
-                panos.setFont(new Font("Arial", Font.PLAIN, 15));
-                this.ulkoasu.add(panos);
-            } else if (i == 50) {
+            } else if (i == 50 && pelipoyta.getPelinTila() == 1) {
                 JLabel panos = new JLabel("Pelaaja:");
                 panos.setFont(new Font("Arial", Font.PLAIN, 15));
                 this.ulkoasu.add(panos);
+            } else if (i == 60 && !kortinvalitsin.palautaPelaajanKortit().isEmpty()) {
+                for (JLabel jLabel : kortinvalitsin.palautaPelaajanKortit()) {
+                    this.ulkoasu.add(jLabel);
+                    i++;
+                }
+                i--;
+            } else if (i == 80 && pelipoyta.getPelinTila() == 1) {
+                this.ulkoasu.add(luoNostaPainike());
+            } else if (i == 82 && pelipoyta.getPelinTila() == 1) {
+                this.ulkoasu.add(luoJaaPainike());
             } else if (i == 89) {
                 if (pelipoyta.getPelaaja().getRahamaara() <= 100 && pelipoyta.getPelinTila() != 1) {
                     this.ulkoasu.add(luoLainaaPainike());

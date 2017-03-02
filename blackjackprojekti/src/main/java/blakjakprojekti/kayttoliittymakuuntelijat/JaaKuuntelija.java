@@ -17,6 +17,7 @@ public class JaaKuuntelija implements ActionListener {
 
     /**
      * Luo jakajan Jakamis painikkeen.
+     *
      * @param pelipoyta Ohjelman päälogiikka.
      * @param asettelija Ohjelman käyttöliittymän päivittäjä.
      */
@@ -31,13 +32,12 @@ public class JaaKuuntelija implements ActionListener {
      * @param e
      */
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) {        
 
-        if (pelipoyta.getPelinTila() == 1) {
+        while (pelipoyta.getPelinTila() == 1) {
             if (pelipoyta.nostaakoJakaja()) {
                 pelipoyta.jakajaNostaa();
             }
-
             if (pelipoyta.getJakaja().meneekoYli()) {
                 pelipoyta.setPelinTila(3);
             } else if (pelipoyta.kenellaEnitenPisteita() == 3) {
@@ -47,10 +47,10 @@ public class JaaKuuntelija implements ActionListener {
             } else if (pelipoyta.kenellaEnitenPisteita() == 2) {
                 pelipoyta.setPelinTila(4);
             }
+            
+            asettelija.paivita();
+           
         }
-
-        asettelija.paivita();
-
     }
 
 }

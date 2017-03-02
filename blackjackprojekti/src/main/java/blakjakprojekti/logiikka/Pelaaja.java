@@ -40,7 +40,7 @@ public class Pelaaja extends Toimija {
     }
 
     public int getRahamaara() {
-        return rahamaara;
+        return this.rahamaara;
     }
 
     public void setRahamaara(int rahamaara) {
@@ -48,7 +48,7 @@ public class Pelaaja extends Toimija {
     }
 
     public int getPanos() {
-        return panos;
+        return this.panos;
     }
 
     public void setPanos(int panos) {

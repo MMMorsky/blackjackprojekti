@@ -127,6 +127,8 @@ public class Pelipoyta {
         } else if (pelinTila == 4) {
             pelaaja.setRahamaara(pelaaja.getPanos() + pelaaja.getRahamaara());
             pelaaja.setPanos(0);
+        } else {
+            pelaaja.setPanos(0);
         }
 
         this.pelinTila = pelinTila;

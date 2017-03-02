@@ -4,8 +4,7 @@ import blakjakprojekti.kayttoliittyma.KayttoliittymanAsettelija;
 import blakjakprojekti.logiikka.Pelipoyta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JFormattedTextField;
-import javax.swing.JTextArea;
+import javax.swing.*;
 
 public class AloitaKuuntelija implements ActionListener {
 
@@ -27,13 +26,13 @@ public class AloitaKuuntelija implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+
         if (pelipoyta.getPelaaja().getRahamaara() >= pelipoyta.getPelaaja().getPanos()) {
             pelipoyta.uusiKierros();
             pelipoyta.aloita();
             pelipoyta.setPelinTila(1);
             asettelija.paivita();
         }
-
     }
 
 }

@@ -30,45 +30,11 @@ public class Kortti {
     }
 
     /**
-     * Palauttaa kortin maan enum luokkana.
-     *
-     * @return Palauttaa kortin maan.
-     */
-    public Maa annaMaa() {
-        return this.maa;
-    }
-
-    /**
-     * Palauttaa kortin arvon teksikäyttöliittymää varten.
-     *
-     * @return kortin arvon.
-     */
-    public String annaArvo() {
-        if (arvo == 11) {
-            return "J";
-        } else if (arvo == 12) {
-            return "Q";
-        } else if (arvo == 13) {
-            return "K";
-        } else if (arvo == 1) {
-            return "A";
-        } else {
-            return Integer.toString(this.arvo);
-        }
-
-    }
-
-    /**
      * Palauttaa tiedostonpäätteen, jotta voidaan valita oikea kuva käyttöliittymälle.
      * @return oikean tiedostopäätteen
      */
     public String palautaTiedostopaate() {
         return "" + this.maa + this.arvo + ".jpg";
-    }
-
-    @Override
-    public String toString() {
-        return annaMaa() + " " + annaArvo();
     }
 
 }

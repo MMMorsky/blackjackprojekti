@@ -26,7 +26,6 @@ public class LainaaKuuntelija implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         pelipoyta.getPelaaja().setRahamaara(pelipoyta.getPelaaja().getRahamaara() + 500);
-        pelipoyta.getPelaaja().setPanos(0);
         asettelija.paivita();
 
     }
