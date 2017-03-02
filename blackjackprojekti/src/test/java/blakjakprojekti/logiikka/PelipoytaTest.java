@@ -127,15 +127,15 @@ public class PelipoytaTest {
         assertTrue(pelipoyta.nostaakoJakaja());
     }
     
-    @Test
-    public void nostaakoJakajaJos() {
-        pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
-        pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
-        
-        pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 12));
-        pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 6));
-        assertFalse(pelipoyta.nostaakoJakaja());
-    }
+//    @Test
+//    public void nostaakoJakajaJos() {
+//        pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
+//        pelipoyta.getPelaaja().setKortti(new Kortti(Maa.PATA, 10));
+//        
+//        pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 12));
+//        pelipoyta.getJakaja().setKortti(new Kortti(Maa.PATA, 6));
+//        assertFalse(pelipoyta.nostaakoJakaja());
+//    }
 
     @Test
     public void pelaajallaEnemmanPisteita() {
