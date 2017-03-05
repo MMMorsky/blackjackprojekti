@@ -18,6 +18,10 @@ public class Pelaaja extends Toimija {
         this.panos = 0;
     }
 
+    /**
+     * Tarkastaa onko pelaajalla Blackjack.
+     * @return palauttaa true mikäli pelaajalla on blackjack.
+     */
     public boolean onkoBlackJack() {
         for (Integer luku : super.palautaPisteet()) {
             if (luku == 21) {

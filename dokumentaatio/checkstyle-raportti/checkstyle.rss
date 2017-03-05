@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 17,
+      <title>File: 16,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -88,20 +88,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittyma.Tesktikayttoliittyma.java">blakjakprojekti/kayttoliittyma/Tesktikayttoliittyma.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittymakuuntelijat.AloitaKuuntelija.java">blakjakprojekti/kayttoliittymakuuntelijat/AloitaKuuntelija.java</a>
                 </td>
                 <td>
@@ -130,7 +116,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Maa.java">blakjakprojekti/logiikka/Maa.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittymakuuntelijat.NostaKuuntelija.java">blakjakprojekti/kayttoliittymakuuntelijat/NostaKuuntelija.java</a>
                 </td>
                 <td>
                   0
@@ -158,7 +144,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.kayttoliittymakuuntelijat.NostaKuuntelija.java">blakjakprojekti/kayttoliittymakuuntelijat/NostaKuuntelija.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Maa.java">blakjakprojekti/logiikka/Maa.java</a>
                 </td>
                 <td>
                   0
@@ -186,7 +172,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.Main.java">blakjakprojekti/Main.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelipoyta.java">blakjakprojekti/logiikka/Pelipoyta.java</a>
                 </td>
                 <td>
                   0
@@ -200,7 +186,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#blakjakprojekti.logiikka.Pelipoyta.java">blakjakprojekti/logiikka/Pelipoyta.java</a>
+                  <a href="${project.url}/checkstyle.html#blakjakprojekti.Main.java">blakjakprojekti/Main.java</a>
                 </td>
                 <td>
                   0
