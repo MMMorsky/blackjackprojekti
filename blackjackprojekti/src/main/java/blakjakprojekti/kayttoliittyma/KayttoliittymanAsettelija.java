@@ -35,7 +35,7 @@ public class KayttoliittymanAsettelija {
     /**
      * Asettelee käyttöliittymän komponentit.
      *
-     * 
+     *
      */
     public void asettele() {
         ulkoasu.removeAll();
@@ -50,21 +50,17 @@ public class KayttoliittymanAsettelija {
                 this.ulkoasu.add(panos);
             } else if (i == 4 && pelipoyta.getPelinTila() != 1) {
                 this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getPanos())));
-            } else if (i == 5 ) {
+            } else if (i == 5) {
                 this.ulkoasu.add(new PanostajaNappi(pelipoyta, this));
             } else if (i == 6 && pelipoyta.getPelaaja().getPanos() != 0) {
                 this.ulkoasu.add(luoNollaaPainike());
             } else if (i == 7) {
                 this.ulkoasu.add(new JLabel("Valuutta:"));
-            }  else if (i == 8) {
+            } else if (i == 8) {
                 this.ulkoasu.add(new JLabel(Integer.toString(pelipoyta.getPelaaja().getRahamaara())));
-            }  else if (i == 9 && pelipoyta.getPelinTila() == 2) {
-                this.ulkoasu.add(new JLabel("Hävisit!"));
-            } else if (i == 9 && pelipoyta.getPelinTila() == 3) {
-                this.ulkoasu.add(new JLabel("Voitit!"));
-            } else if (i == 9 && pelipoyta.getPelinTila() == 4) {
-                this.ulkoasu.add(new JLabel("Tasapeli!"));
-            } else if (i == 30 && pelipoyta.getPelinTila() == 1) {
+            } else if (i == 9) {
+                this.ulkoasu.add(luoPelinTilaIlmoitus());
+            } else if (i == 30 && pelipoyta.getPelinTila() != 0) {
                 JLabel panos = new JLabel("Jakaja:");
                 panos.setFont(new Font("Arial", Font.PLAIN, 15));
                 this.ulkoasu.add(panos);
@@ -74,7 +70,7 @@ public class KayttoliittymanAsettelija {
                     i++;
                 }
                 i--;
-            } else if (i == 50 && pelipoyta.getPelinTila() == 1) {
+            } else if (i == 50 && pelipoyta.getPelinTila() != 0) {
                 JLabel panos = new JLabel("Pelaaja:");
                 panos.setFont(new Font("Arial", Font.PLAIN, 15));
                 this.ulkoasu.add(panos);
@@ -101,6 +97,7 @@ public class KayttoliittymanAsettelija {
 
     /**
      * Palauttaa ulkoasun käyttöliittymälle.
+     *
      * @return palauttaa ulkoasun
      */
     public JPanel getUlkoasu() {
@@ -162,6 +159,20 @@ public class KayttoliittymanAsettelija {
         painike.setFont(new Font("Arial", Font.PLAIN, 15));
         painike.addActionListener(new LainaaKuuntelija(pelipoyta, this));
         return painike;
+    }
+
+    private JLabel luoPelinTilaIlmoitus() {
+        if (pelipoyta.getPelinTila() == 2) {
+            return new JLabel("Hävisit!");
+        } else if (pelipoyta.getPelinTila() == 3) {
+            return new JLabel("Voitit!");
+        } else if (pelipoyta.getPelinTila() == 4) {
+            return new JLabel("Tasapeli!");
+        } else if (pelipoyta.getPelinTila() == 5) {
+            return new JLabel("Blackjack!");
+        } else {
+            return new JLabel();
+        }
     }
 
 }

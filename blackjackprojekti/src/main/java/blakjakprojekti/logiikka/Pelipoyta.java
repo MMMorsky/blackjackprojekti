@@ -56,22 +56,14 @@ public class Pelipoyta {
      */
     public boolean nostaakoJakaja() {
         int temp1 = 0;
-        int temp2 = 0;
         for (Integer arvo : jakaja.palautaPisteet()) {
-            if (arvo > 16) {
-                temp1++;
-                temp2++;
-            } else {
+            if (arvo <= 16) {
                 temp1++;
             }
         }
         if (kenellaEnitenPisteita() == 3) {
             return false;
-        } else if (temp1 == 1 && temp2 == 1) {
-            return false;
-        } else if (temp1 == 2 && temp2 == 2) {
-            return false;
-        } else if (temp1 == 0 && temp2 == 0) {
+        } else if (temp1 < 1) {
             return false;
         }
         return true;
@@ -127,6 +119,9 @@ public class Pelipoyta {
         } else if (pelinTila == 4) {
             pelaaja.setRahamaara(pelaaja.getPanos() + pelaaja.getRahamaara());
             pelaaja.setPanos(0);
+        } else if (pelinTila == 5) {
+            pelaaja.setRahamaara(pelaaja.getPanos() * 3 + pelaaja.getRahamaara());
+            pelaaja.setPanos(0);
         } else {
             pelaaja.setPanos(0);
         }
@@ -153,24 +148,12 @@ public class Pelipoyta {
         return pelaaja;
     }
 
-    public void setPelaaja(Pelaaja pelaaja) {
-        this.pelaaja = pelaaja;
-    }
-
     public Jakaja getJakaja() {
         return jakaja;
     }
 
-    public void setJakaja(Jakaja jakaja) {
-        this.jakaja = jakaja;
-    }
-
     public Korttipakka getKorttipakka() {
         return korttipakka;
-    }
-
-    public void setKorttipakka(Korttipakka korttipakka) {
-        this.korttipakka = korttipakka;
     }
 
 }

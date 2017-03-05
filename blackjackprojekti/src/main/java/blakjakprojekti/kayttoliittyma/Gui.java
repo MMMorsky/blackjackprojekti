@@ -57,26 +57,6 @@ public class Gui implements Runnable {
 
     }
 
-    private JLabel luoKortti() {
-        BufferedImage kuva = null;
-        try {
-            kuva = ImageIO.read(new File("testikuva.gif"));
-        } catch (IOException ex) {
-            Logger.getLogger(Gui.class
-                    .getName()).log(Level.SEVERE, null, ex);
-        }
-        JLabel picLabel = new JLabel(new ImageIcon(kuva));
-        return picLabel;
-    }
-
-    private JPanel luoPainikkeet() {
-        JPanel panel = new JPanel(new GridLayout(0, 2));
-        panel.add(new JButton("Nosta"));
-        panel.add(new JButton("Jää"));
-
-        return panel;
-    }
-
     public JFrame getFrame() {
         return frame;
     }

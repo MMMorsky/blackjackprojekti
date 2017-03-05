@@ -73,9 +73,7 @@ public class Korttipakka {
      * @return palauttaa otetun kortin.
      */
     public Kortti annaKortti() {
-        Kortti kortti = kortit.get(0);
-        kortit.remove(0);
-        return kortti;
+        return kortit.remove(0);
     }
 
 }

@@ -11,9 +11,9 @@ public class AloitaKuuntelija implements ActionListener {
     private Pelipoyta pelipoyta;
     private KayttoliittymanAsettelija asettelija;
 
-   
     /**
      * Aloita napin kuuntelija.
+     *
      * @param pelipoyta Ohjelman päälogiikka
      * @param asettelija Ohjelman asettelija, jolla päivitetään pelin näkymä.
      */
@@ -25,7 +25,6 @@ public class AloitaKuuntelija implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
 
         if (pelipoyta.getPelaaja().getRahamaara() >= pelipoyta.getPelaaja().getPanos()) {
             pelipoyta.uusiKierros();

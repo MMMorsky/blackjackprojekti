@@ -12,9 +12,6 @@ public class Main {
         Pelipoyta pelipoyta = new Pelipoyta();
         Gui gui = new Gui(pelipoyta);
         SwingUtilities.invokeLater(gui);
-//        Scanner lukija = new Scanner(System.in);
-//        Tesktikayttoliittyma kayttoliittyma = new Tesktikayttoliittyma(lukija);
-//        kayttoliittyma.kaynnista();
     }
 
 }

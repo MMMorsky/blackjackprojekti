@@ -17,39 +17,54 @@ import static org.junit.Assert.*;
  * @author max
  */
 public class PelaajaTest {
+
     Pelaaja pelaaja;
-    
+
     public PelaajaTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         pelaaja = new Pelaaja();
     }
-    
+
     @After
     public void tearDown() {
+    }
+
+    @Test
+    public void onkoPelaajallaBlackJack() {
+        pelaaja.setKortti(new Kortti(Maa.PATA, 1));
+        pelaaja.setKortti(new Kortti(Maa.PATA, 10));
+        assertTrue(pelaaja.onkoBlackJack());
+    }
+
+    @Test
+    public void onkoPelaajallaBlackJackEiOle() {
+        pelaaja.setKortti(new Kortti(Maa.PATA, 1));
+        pelaaja.setKortti(new Kortti(Maa.PATA, 9));
+        assertFalse(pelaaja.onkoBlackJack());
     }
 
     @Test
     public void pelaajanLuominenOnnistuu() {
         assertEquals(500, pelaaja.getRahamaara());
     }
-    
+
     @Test
     public void kahdensadanPanostusToimii() {
         pelaaja.panosta200();
         assertEquals(200, pelaaja.getPanos());
     }
-    
+
     @Test
     public void panostaminenToimiiUseallaKaskylla() {
         pelaaja.panosta100();
@@ -57,16 +72,17 @@ public class PelaajaTest {
         pelaaja.panosta50();
         assertEquals(350, pelaaja.getPanos());
     }
-    
+
     @Test
     public void setRahaMaaraToimii() {
         pelaaja.setRahamaara(500);
         assertEquals(500, pelaaja.getRahamaara());
     }
-    
+
     @Test
     public void setPanosToimii() {
         pelaaja.setPanos(5000);
         assertEquals(5000, pelaaja.getPanos());
     }
+
 }

@@ -38,26 +38,29 @@ public class KorttiTest {
     @After
     public void tearDown() {
     }
-    
+
     @Test
     public void korttiPalauttaaOikeanTiedostoPaatteen() {
         kortti = new Kortti(Maa.HERTTA, 4);
         assertEquals("HERTTA4.jpg", kortti.palautaTiedostopaate());
     }
-    
+
     @Test
     public void korttiPalauttaaOikeanEnumLuokan() {
         kortti = new Kortti(Maa.RUUTU, 4);
-        assertEquals( Maa.RUUTU, kortti.getMaa());
+        assertEquals(Maa.RUUTU, kortti.getMaa());
     }
-    
 
     @Test
     public void korttiPalauttaaNumeron() {
         kortti = new Kortti(Maa.PATA, 4);
         assertEquals(4, kortti.getArvo());
     }
-    
-    
+
+    @Test
+    public void korttiPalauttaaOikeanMaaLuokan() {
+        kortti = new Kortti(Maa.PATA, 4);
+        assertEquals(Maa.PATA, kortti.getMaa());
+    }
 
 }

@@ -18,6 +18,15 @@ public class Pelaaja extends Toimija {
         this.panos = 0;
     }
 
+    public boolean onkoBlackJack() {
+        for (Integer luku : super.palautaPisteet()) {
+            if (luku == 21) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * Panostaa 100.
      */

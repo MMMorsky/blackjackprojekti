@@ -93,7 +93,6 @@ public class Toimija {
         this.kortit.clear();
     }
 
- 
     public List<Kortti> getKortit() {
         return kortit;
     }

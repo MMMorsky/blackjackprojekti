@@ -14,9 +14,9 @@ public class PanostajaNappi extends JPanel {
     private Pelipoyta pelipoyta;
     private KayttoliittymanAsettelija asettelija;
 
-    
     /**
      * Luo panostamiseen tarkoitetun napin.
+     *
      * @param pelipoyta Ohjelman päälogiikka
      * @param asettelija Asettelija, jolla voidaan päivittää pelinäkymä
      */

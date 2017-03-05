@@ -32,13 +32,15 @@ public class JaaKuuntelija implements ActionListener {
      * @param e
      */
     @Override
-    public void actionPerformed(ActionEvent e) {        
+    public void actionPerformed(ActionEvent e) {
 
         while (pelipoyta.getPelinTila() == 1) {
             if (pelipoyta.nostaakoJakaja()) {
                 pelipoyta.jakajaNostaa();
             }
-            if (pelipoyta.getJakaja().meneekoYli()) {
+            if (pelipoyta.getPelaaja().onkoBlackJack()) {
+                pelipoyta.setPelinTila(5);
+            } else if (pelipoyta.getJakaja().meneekoYli()) {
                 pelipoyta.setPelinTila(3);
             } else if (pelipoyta.kenellaEnitenPisteita() == 3) {
                 pelipoyta.setPelinTila(2);
@@ -47,9 +49,9 @@ public class JaaKuuntelija implements ActionListener {
             } else if (pelipoyta.kenellaEnitenPisteita() == 2) {
                 pelipoyta.setPelinTila(4);
             }
-            
+
             asettelija.paivita();
-           
+
         }
     }
 

@@ -50,17 +50,24 @@ public class KorttipakkaTest {
         korttipakka.otaKortti(new Kortti(Maa.HERTTA, 1));
         assertEquals(korttipakka.getKortit().size(), 52);
     }
-    
+
+    @Test
+    public void kortinVastaanottaminenLisaaSenListaan() {
+        Kortti kortti = new Kortti(Maa.HERTTA, 1);
+        korttipakka.otaKortti(kortti);
+        assertEquals(korttipakka.getKortit().get(52), kortti);
+    }
+
     @Test
     public void uusiPeliMetodiToimii() {
         korttipakka.uusiPeli();
         assertEquals(52, korttipakka.getKortit().size());
     }
-    
+
     @Test
     public void kortinAntaminenAntaaOikeanKortinJaTarkastaaMaan() {
         Kortti kortti = korttipakka.annaKortti();
-        assertEquals(Maa.HERTTA, kortti.getMaa() );
+        assertEquals(Maa.HERTTA, kortti.getMaa());
     }
 
 }

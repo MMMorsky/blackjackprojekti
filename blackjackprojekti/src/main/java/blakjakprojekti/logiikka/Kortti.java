@@ -30,11 +30,14 @@ public class Kortti {
     }
 
     /**
-     * Palauttaa tiedostonpäätteen, jotta voidaan valita oikea kuva käyttöliittymälle.
+     * Palauttaa tiedostonpäätteen, jotta voidaan valita oikea kuva
+     * käyttöliittymälle.
+     *
      * @return oikean tiedostopäätteen
      */
     public String palautaTiedostopaate() {
-        return "" + this.maa + this.arvo + ".jpg";
+        String palautettava = "" + this.maa + this.arvo + ".jpg";
+        return palautettava;
     }
 
 }

@@ -20,15 +20,16 @@ public class KortinValitsin {
 
     /**
      * Tämä luokka valitsee käyttöliittymälle, oikean kuvan vastaamaan korttia.
+     *
      * @param pelipoyta Ohjelman toiminnallisuus
      */
     public KortinValitsin(Pelipoyta pelipoyta) {
         this.pelipoyta = pelipoyta;
     }
 
-    
     /**
      * Palauttaa pelaajan kortit kuvina.
+     *
      * @return Palauttaa kortit listana JLabeleita
      */
     public List<JLabel> palautaPelaajanKortit() {
@@ -52,6 +53,7 @@ public class KortinValitsin {
 
     /**
      * Palauttaa jakajankortit kuvina.
+     *
      * @return Palautuu JLabel listana
      */
     public List<JLabel> palautaJakajanKortit() {
